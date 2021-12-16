@@ -64,6 +64,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
+        btnVolver = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -78,12 +79,14 @@ public class FrmAlumno extends javax.swing.JFrame {
 
         cmdGrado1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmdGrado1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", " " }));
+        cmdGrado1.setBorder(null);
         jPanel4.add(cmdGrado1);
-        cmdGrado1.setBounds(30, 140, 180, 20);
+        cmdGrado1.setBounds(30, 140, 180, 24);
 
         txtVacante.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtVacante.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.add(txtVacante);
-        txtVacante.setBounds(30, 200, 180, 20);
+        txtVacante.setBounds(30, 200, 180, 24);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,8 +108,9 @@ public class FrmAlumno extends javax.swing.JFrame {
 
         cmdNivel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmdNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "INICIAL", "PRIMARIA", "SECUNDARIA" }));
+        cmdNivel.setBorder(null);
         jPanel4.add(cmdNivel);
-        cmdNivel.setBounds(30, 80, 180, 20);
+        cmdNivel.setBounds(30, 80, 180, 24);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 16 1.png"))); // NOI18N
         jPanel4.add(jLabel13);
@@ -119,103 +123,112 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel3.setLayout(null);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel10.setText("NOMBRE DE CONTACTO");
+        jLabel10.setText("NOMBRE DE CONTACTO:");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(260, 220, 134, 15);
+        jLabel10.setBounds(260, 225, 150, 15);
 
         txtContacto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtContacto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtContacto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtContactoActionPerformed(evt);
             }
         });
         jPanel3.add(txtContacto);
-        txtContacto.setBounds(260, 240, 200, 20);
+        txtContacto.setBounds(260, 240, 200, 24);
 
         txtNEmergencia.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtNEmergencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtNEmergencia);
-        txtNEmergencia.setBounds(260, 190, 200, 20);
+        txtNEmergencia.setBounds(260, 190, 200, 24);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setText("NUMERO DE EMERGENCIA");
+        jLabel9.setText("NUMERO DE EMERGENCIA:");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(260, 170, 143, 15);
+        jLabel9.setBounds(260, 175, 147, 15);
 
         txtTratamiento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTratamiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtTratamiento);
-        txtTratamiento.setBounds(260, 140, 200, 20);
+        txtTratamiento.setBounds(260, 140, 200, 24);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel8.setText("TRATAMIENTO");
+        jLabel8.setText("TRATAMIENTO:");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(260, 120, 120, 15);
+        jLabel8.setBounds(260, 125, 120, 15);
 
         txtAntecedentes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAntecedentes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtAntecedentes);
-        txtAntecedentes.setBounds(260, 90, 200, 20);
+        txtAntecedentes.setBounds(260, 90, 200, 24);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("ANTECEDENTES DE SALUD");
+        jLabel7.setText("A:NTECEDENTES DE SALUD:");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(260, 70, 150, 15);
+        jLabel7.setBounds(260, 75, 170, 15);
         jPanel3.add(dateNacimiento);
-        dateNacimiento.setBounds(260, 40, 200, 20);
+        dateNacimiento.setBounds(260, 40, 200, 24);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setText("FECHA DE NACIMIENTO");
+        jLabel6.setText("FECHA DE NACIMIENTO:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(260, 20, 131, 15);
+        jLabel6.setBounds(260, 25, 135, 15);
 
         txtApellidopaterno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtApellidopaterno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtApellidopaterno);
-        txtApellidopaterno.setBounds(30, 140, 200, 20);
+        txtApellidopaterno.setBounds(30, 140, 200, 24);
 
         txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
         jPanel3.add(txtNombre);
-        txtNombre.setBounds(30, 90, 200, 20);
+        txtNombre.setBounds(30, 90, 200, 24);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("SEXO");
+        jLabel5.setText("SEXO:");
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(30, 220, 30, 15);
+        jLabel5.setBounds(30, 225, 34, 15);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("APELLIDO MATERNO");
+        jLabel4.setText("APELLIDO MATERNO:");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(30, 170, 115, 15);
+        jLabel4.setBounds(30, 175, 119, 15);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("APELLIDO PATERNO");
+        jLabel3.setText("APELLIDO PATERNO:");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(30, 120, 113, 15);
+        jLabel3.setBounds(30, 125, 117, 15);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("NOMBRES");
+        jLabel2.setText("NOMBRES:");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(30, 70, 62, 17);
+        jLabel2.setBounds(30, 75, 62, 17);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setText("DNI");
+        jLabel14.setText("DNI:");
         jPanel3.add(jLabel14);
-        jLabel14.setBounds(30, 20, 20, 15);
+        jLabel14.setBounds(30, 25, 24, 15);
 
         txtDni1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtDni1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtDni1);
-        txtDni1.setBounds(30, 40, 200, 20);
+        txtDni1.setBounds(30, 40, 200, 24);
 
         txtApellidomaterno1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtApellidomaterno1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtApellidomaterno1);
-        txtApellidomaterno1.setBounds(30, 190, 200, 20);
+        txtApellidomaterno1.setBounds(30, 190, 200, 24);
 
         cmdGrado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmdGrado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "MASCULINO", "FEMENINO", " " }));
+        cmdGrado.setBorder(null);
         jPanel3.add(cmdGrado);
-        cmdGrado.setBounds(30, 240, 200, 20);
+        cmdGrado.setBounds(30, 240, 200, 24);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(280, 90, 500, 280);
@@ -263,16 +276,23 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(780, 90, 220, 280);
 
+        btnVolver.setBackground(new java.awt.Color(255, 255, 255));
+        btnVolver.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnVolver.setText("VOLVER");
+        jPanel1.add(btnVolver);
+        btnVolver.setBounds(40, 50, 120, 30);
+
         btnbuscar.setBackground(new java.awt.Color(255, 255, 255));
         btnbuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/buscar.png"))); // NOI18N
         btnbuscar.setText("BUSCAR");
         jPanel1.add(btnbuscar);
-        btnbuscar.setBounds(880, 30, 120, 30);
+        btnbuscar.setBounds(880, 50, 120, 30);
 
         txtBuscar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(txtBuscar);
-        txtBuscar.setBounds(650, 40, 220, 20);
+        txtBuscar.setBounds(650, 50, 220, 24);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 16.png"))); // NOI18N
         jPanel1.add(jLabel11);
@@ -282,7 +302,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1039, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,6 +361,7 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGurdar;
     public javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnVolver;
     public javax.swing.JButton btnbuscar;
     public javax.swing.JComboBox<String> cmdGrado;
     public javax.swing.JComboBox<String> cmdGrado1;
