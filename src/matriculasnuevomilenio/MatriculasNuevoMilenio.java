@@ -5,6 +5,7 @@
  */
 package matriculasnuevomilenio;
 
+import Controlador.ControladorInicio;
 import Vista.FrmAlumno;
 import Vista.FrmInicio;
 
@@ -19,7 +20,9 @@ public class MatriculasNuevoMilenio {
      */
     public static void main(String[] args) {
         FrmInicio inicio = new FrmInicio();
+        ControladorInicio conI = new ControladorInicio(inicio);
         inicio.setVisible(true);
     }
+    
     
 }

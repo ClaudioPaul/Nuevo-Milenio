@@ -5,6 +5,8 @@
  */
 package Controlador;
 
+import Modelo.AlumnoDao;
+import Vista.FrmAlumno;
 import Vista.FrmInicio;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,7 +26,12 @@ public class ControladorInicio implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-       
+       if(ae.getSource() == inicio.btnAlumnos){
+           FrmAlumno alumno = new FrmAlumno();
+           AlumnoDao aDao = new AlumnoDao();
+           ControladorAlumno cona = new ControladorAlumno(alumno, aDao);
+           alumno.setVisible(true);
+       }
     }
     
 }

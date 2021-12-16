@@ -34,7 +34,7 @@ public class FrmInicio extends javax.swing.JFrame {
         btnMatricula = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setState(6);
+        setExtendedState(6);
 
         jMenu1.setText("ALUMNOS");
 
