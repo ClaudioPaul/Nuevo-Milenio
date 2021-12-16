@@ -35,6 +35,7 @@ public class ControladorAlumno implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == alumno.btnGurdar){
+            
             int dni = Integer.parseInt(alumno.txtDni.getText());
             String nombres = alumno.txtNombre.getText();
             String apellidoP = alumno.txtApellidopaterno.getText();
