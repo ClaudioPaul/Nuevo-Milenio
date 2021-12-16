@@ -213,7 +213,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         btnSalir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnSalir.setText("X");
         jPanel1.add(btnSalir);
-        btnSalir.setBounds(1000, 0, 40, 30);
+        btnSalir.setBounds(990, 0, 50, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 16.png"))); // NOI18N
         jPanel1.add(jLabel1);

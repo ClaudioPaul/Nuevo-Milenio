@@ -285,7 +285,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         btnSalir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnSalir.setText("X");
         jPanel1.add(btnSalir);
-        btnSalir.setBounds(1000, 0, 40, 30);
+        btnSalir.setBounds(990, 0, 50, 30);
 
         btnbuscar.setBackground(new java.awt.Color(255, 255, 255));
         btnbuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -315,6 +315,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
