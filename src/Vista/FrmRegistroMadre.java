@@ -48,10 +48,10 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         cmdApoderado = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -168,12 +168,6 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(37, 113, 169));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("SIGUIENTE");
-        jPanel2.add(jButton1);
-        jButton1.setBounds(0, 270, 310, 30);
-
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         btnNuevo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/anadir.png"))); // NOI18N
@@ -194,6 +188,12 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         btnCancelar.setText("CANCELAR");
         jPanel2.add(btnCancelar);
         btnCancelar.setBounds(80, 150, 150, 30);
+
+        jButton1.setBackground(new java.awt.Color(37, 113, 169));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SIGUIENTE");
+        jPanel2.add(jButton1);
+        jButton1.setBounds(0, 270, 310, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 16 3.png"))); // NOI18N
         jPanel2.add(jLabel2);
