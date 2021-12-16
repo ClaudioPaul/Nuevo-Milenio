@@ -65,7 +65,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         btnEliminar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        btnVolver = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -281,11 +281,11 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel1.add(jLabel18);
         jLabel18.setBounds(460, 10, 70, 70);
 
-        btnVolver.setBackground(new java.awt.Color(255, 255, 255));
-        btnVolver.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnVolver.setText("VOLVER");
-        jPanel1.add(btnVolver);
-        btnVolver.setBounds(50, 50, 120, 30);
+        btnSalir.setBackground(new java.awt.Color(255, 255, 255));
+        btnSalir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnSalir.setText("X");
+        jPanel1.add(btnSalir);
+        btnSalir.setBounds(1000, 0, 40, 30);
 
         btnbuscar.setBackground(new java.awt.Color(255, 255, 255));
         btnbuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -366,7 +366,7 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGurdar;
     public javax.swing.JButton btnNuevo;
-    public javax.swing.JButton btnVolver;
+    public javax.swing.JButton btnSalir;
     public javax.swing.JButton btnbuscar;
     public javax.swing.JComboBox<String> cmdGrado1;
     public javax.swing.JComboBox<String> cmdNivel;

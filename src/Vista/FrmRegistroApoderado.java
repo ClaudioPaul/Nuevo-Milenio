@@ -53,9 +53,11 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         btnEditar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        btnSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setLayout(null);
 
@@ -207,6 +209,12 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(640, 70, 310, 300);
 
+        btnSalir.setBackground(new java.awt.Color(255, 255, 255));
+        btnSalir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnSalir.setText("X");
+        jPanel1.add(btnSalir);
+        btnSalir.setBounds(1000, 0, 40, 30);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 16.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1042, 450);
@@ -223,6 +231,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
@@ -277,6 +286,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
     public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnSalir;
     public javax.swing.JComboBox<String> cmdApoderado;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
