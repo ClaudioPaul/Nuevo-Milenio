@@ -45,7 +45,6 @@ public class FrmAlumno extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtAntecedentes = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        dateNacimiento = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
         txtApellidopaterno = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
@@ -54,10 +53,9 @@ public class FrmAlumno extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        txtDni1 = new javax.swing.JTextField();
-        txtApellidomaterno1 = new javax.swing.JTextField();
+        txtDni = new javax.swing.JTextField();
+        txtApellidomaterno = new javax.swing.JTextField();
         cmdSexo = new javax.swing.JComboBox<>();
-        jLabel17 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnGurdar = new javax.swing.JButton();
@@ -165,11 +163,9 @@ public class FrmAlumno extends javax.swing.JFrame {
         txtAntecedentes.setBounds(260, 90, 200, 24);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("NTECEDENTES DE SALUD:");
+        jLabel7.setText("ANTECEDENTES DE SALUD:");
         jPanel3.add(jLabel7);
         jLabel7.setBounds(260, 75, 170, 15);
-        jPanel3.add(dateNacimiento);
-        dateNacimiento.setBounds(260, 40, 200, 24);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setText("FECHA DE NACIMIENTO:");
@@ -216,25 +212,21 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel3.add(jLabel14);
         jLabel14.setBounds(30, 25, 24, 15);
 
-        txtDni1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtDni1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(txtDni1);
-        txtDni1.setBounds(30, 40, 200, 24);
+        txtDni.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtDni.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(txtDni);
+        txtDni.setBounds(30, 40, 200, 24);
 
-        txtApellidomaterno1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtApellidomaterno1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(txtApellidomaterno1);
-        txtApellidomaterno1.setBounds(30, 190, 200, 24);
+        txtApellidomaterno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtApellidomaterno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(txtApellidomaterno);
+        txtApellidomaterno.setBounds(30, 190, 200, 24);
 
         cmdSexo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmdSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "MASCULINO", "FEMENINO", " " }));
         cmdSexo.setBorder(null);
         jPanel3.add(cmdSexo);
         cmdSexo.setBounds(30, 240, 200, 24);
-
-        jLabel17.setText("jLabel17");
-        jPanel3.add(jLabel17);
-        jLabel17.setBounds(480, 120, 40, 14);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(280, 90, 500, 280);
@@ -376,7 +368,6 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> cmdGrado1;
     public javax.swing.JComboBox<String> cmdNivel;
     public javax.swing.JComboBox<String> cmdSexo;
-    public com.toedter.calendar.JDateChooser dateNacimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -385,7 +376,6 @@ public class FrmAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -400,11 +390,11 @@ public class FrmAlumno extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     public javax.swing.JTextField txtAntecedentes;
-    public javax.swing.JTextField txtApellidomaterno1;
+    public javax.swing.JTextField txtApellidomaterno;
     public javax.swing.JTextField txtApellidopaterno;
     public javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtContacto;
-    public javax.swing.JTextField txtDni1;
+    public javax.swing.JTextField txtDni;
     public javax.swing.JTextField txtNEmergencia;
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtTratamiento;

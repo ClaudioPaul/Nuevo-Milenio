@@ -36,10 +36,10 @@ public class ControladorAlumno implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == alumno.btnGurdar){
             
-            int dni = Integer.parseInt(alumno.txtDni1.getText());
+            int dni = Integer.parseInt(alumno.txtDni.getText());
             String nombres = alumno.txtNombre.getText();
             String apellidoP = alumno.txtApellidopaterno.getText();
-            String apellidoM = alumno.txtApellidomaterno1.getText();
+            String apellidoM = alumno.txtApellidomaterno.getText();
             String sexo = alumno.cmdSexo.getSelectedItem().toString();
             
             // FECHA DE INGRESO

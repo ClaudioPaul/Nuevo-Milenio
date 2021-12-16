@@ -28,10 +28,10 @@ public class AlumnoDao {
         try {
             Connection accesoBD = conexion.getConexion();
             CallableStatement cs = accesoBD.prepareCall("{ call RegistrarAlumno(?,?,?,?,?,?,?,?,?,?)}");
-            cs.setInt(1, dni);
-            cs.setString(2, nombres);
-            cs.setString(3, apellidoP);
-            cs.setString(4, apellidoM);
+            cs.setString(1, nombres);
+            cs.setString(2, apellidoP);
+            cs.setString(3, apellidoM);
+            cs.setInt(4, dni);
             cs.setString(5, sexo);
             cs.setString(6, fechaNacimiento);
             cs.setString(7, antecedentes);
