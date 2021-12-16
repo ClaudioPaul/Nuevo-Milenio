@@ -57,6 +57,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         txtDni1 = new javax.swing.JTextField();
         txtApellidomaterno1 = new javax.swing.JTextField();
         cmdGrado = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnGurdar = new javax.swing.JButton();
@@ -64,6 +65,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         btnVolver = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
@@ -230,6 +232,10 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel3.add(cmdGrado);
         cmdGrado.setBounds(30, 240, 200, 24);
 
+        jLabel17.setText("jLabel17");
+        jPanel3.add(jLabel17);
+        jLabel17.setBounds(480, 120, 40, 14);
+
         jPanel1.add(jPanel3);
         jPanel3.setBounds(280, 90, 500, 280);
 
@@ -276,11 +282,15 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(780, 90, 220, 280);
 
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGO.png"))); // NOI18N
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(460, 10, 70, 70);
+
         btnVolver.setBackground(new java.awt.Color(255, 255, 255));
         btnVolver.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnVolver.setText("VOLVER");
         jPanel1.add(btnVolver);
-        btnVolver.setBounds(40, 50, 120, 30);
+        btnVolver.setBounds(50, 50, 120, 30);
 
         btnbuscar.setBackground(new java.awt.Color(255, 255, 255));
         btnbuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -292,7 +302,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         txtBuscar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(txtBuscar);
-        txtBuscar.setBounds(650, 50, 220, 24);
+        txtBuscar.setBounds(680, 50, 190, 24);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Group 16.png"))); // NOI18N
         jPanel1.add(jLabel11);
@@ -375,6 +385,8 @@ public class FrmAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
