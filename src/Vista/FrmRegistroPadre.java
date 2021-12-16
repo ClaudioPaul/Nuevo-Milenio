@@ -28,6 +28,7 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         txtDni = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
@@ -48,7 +49,7 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         cmdApoderado = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnSiguiente = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
@@ -60,6 +61,12 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(null);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("DATOS DEL PADRE");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(150, 40, 160, 20);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(null);
@@ -170,11 +177,11 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(37, 113, 169));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("SIGUIENTE");
-        jPanel2.add(jButton1);
-        jButton1.setBounds(0, 270, 310, 30);
+        btnSiguiente.setBackground(new java.awt.Color(37, 113, 169));
+        btnSiguiente.setForeground(new java.awt.Color(255, 255, 255));
+        btnSiguiente.setText("SIGUIENTE");
+        jPanel2.add(btnSiguiente);
+        btnSiguiente.setBounds(0, 270, 310, 30);
 
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         btnNuevo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -270,9 +277,10 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
     public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnSiguiente;
     public javax.swing.JComboBox<String> cmdApoderado;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;

@@ -28,6 +28,7 @@ public class FrmAlumno extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnContinual = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         cmdGrado1 = new javax.swing.JComboBox<>();
         txtVacante = new javax.swing.JTextField();
@@ -75,6 +76,13 @@ public class FrmAlumno extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.setLayout(null);
+
+        btnContinual.setBackground(new java.awt.Color(255, 255, 255));
+        btnContinual.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnContinual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/diskette_save_saveas_1514.png"))); // NOI18N
+        btnContinual.setText("continuar");
+        jPanel1.add(btnContinual);
+        btnContinual.setBounds(40, 380, 150, 30);
 
         jPanel4.setLayout(null);
 
@@ -363,6 +371,7 @@ public class FrmAlumno extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnContinual;
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGurdar;

@@ -7,6 +7,7 @@ package Controlador;
 
 import Modelo.AlumnoDao;
 import Vista.FrmAlumno;
+import Vista.FrmRegistroPadre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
@@ -30,6 +31,8 @@ public class ControladorAlumno implements ActionListener{
         this.alumno.btnEditar.addActionListener(this);
         this.alumno.btnEliminar.addActionListener(this);
         this.alumno.btnbuscar.addActionListener(this);
+        this.alumno.btnSalir.addActionListener(this);
+        this.alumno.btnContinual.addActionListener(this);
     }
 
     @Override
@@ -63,6 +66,17 @@ public class ControladorAlumno implements ActionListener{
                 JOptionPane.showMessageDialog(null, "ERROR EN REGISTRAR");
             }
         }
+        if(ae.getSource() == alumno.btnSalir){
+            alumno.dispose();
+        }
+        
+        if(ae.getSource() == alumno.btnContinual){
+            FrmRegistroPadre padre = new FrmRegistroPadre();
+            ControladorPadre conP = new ControladorPadre(padre);
+            alumno.dispose();
+            padre.setVisible(true);
+        }
+        
     }
     
 }

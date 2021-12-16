@@ -28,6 +28,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         txtDni = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
@@ -35,7 +36,6 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtApellidopaterno = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         txtApellidomaterno = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
@@ -46,7 +46,6 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtDireccion = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        cmdApoderado = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
@@ -60,6 +59,12 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(null);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("DATOS DEL APODERADO");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(150, 40, 210, 30);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(null);
@@ -98,11 +103,6 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         txtApellidopaterno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(txtApellidopaterno);
         txtApellidopaterno.setBounds(30, 140, 200, 24);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("APODERADO:");
-        jPanel3.add(jLabel5);
-        jLabel5.setBounds(140, 230, 75, 15);
 
         txtApellidomaterno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtApellidomaterno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -158,12 +158,6 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         jLabel9.setText("APELLIDO MATERNO:");
         jPanel3.add(jLabel9);
         jLabel9.setBounds(30, 170, 119, 15);
-
-        cmdApoderado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cmdApoderado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "SI", "NO", " " }));
-        cmdApoderado.setBorder(null);
-        jPanel3.add(cmdApoderado);
-        cmdApoderado.setBounds(140, 250, 200, 24);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(150, 70, 490, 300);
@@ -287,15 +281,14 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnNuevo;
     public javax.swing.JButton btnSalir;
-    public javax.swing.JComboBox<String> cmdApoderado;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
