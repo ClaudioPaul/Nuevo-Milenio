@@ -56,7 +56,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         txtDni1 = new javax.swing.JTextField();
         txtApellidomaterno1 = new javax.swing.JTextField();
-        cmdGrado = new javax.swing.JComboBox<>();
+        cmdSexo = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
@@ -165,7 +165,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         txtAntecedentes.setBounds(260, 90, 200, 24);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("A:NTECEDENTES DE SALUD:");
+        jLabel7.setText("NTECEDENTES DE SALUD:");
         jPanel3.add(jLabel7);
         jLabel7.setBounds(260, 75, 170, 15);
         jPanel3.add(dateNacimiento);
@@ -226,11 +226,11 @@ public class FrmAlumno extends javax.swing.JFrame {
         jPanel3.add(txtApellidomaterno1);
         txtApellidomaterno1.setBounds(30, 190, 200, 24);
 
-        cmdGrado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cmdGrado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "MASCULINO", "FEMENINO", " " }));
-        cmdGrado.setBorder(null);
-        jPanel3.add(cmdGrado);
-        cmdGrado.setBounds(30, 240, 200, 24);
+        cmdSexo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmdSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "MASCULINO", "FEMENINO", " " }));
+        cmdSexo.setBorder(null);
+        jPanel3.add(cmdSexo);
+        cmdSexo.setBounds(30, 240, 200, 24);
 
         jLabel17.setText("jLabel17");
         jPanel3.add(jLabel17);
@@ -373,9 +373,9 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JButton btnNuevo;
     public javax.swing.JButton btnVolver;
     public javax.swing.JButton btnbuscar;
-    public javax.swing.JComboBox<String> cmdGrado;
     public javax.swing.JComboBox<String> cmdGrado1;
     public javax.swing.JComboBox<String> cmdNivel;
+    public javax.swing.JComboBox<String> cmdSexo;
     public com.toedter.calendar.JDateChooser dateNacimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

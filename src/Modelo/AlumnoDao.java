@@ -5,8 +5,6 @@
  */
 package Modelo;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 
