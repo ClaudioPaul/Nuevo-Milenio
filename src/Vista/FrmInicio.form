@@ -11,7 +11,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="btnAlumnos">
               <Properties>
-                <Property name="text" type="java.lang.String" value="REGISTRO DE ALUMNOS"/>
+                <Property name="text" type="java.lang.String" value="REGISTRAR DATOS DEL ALUMNO"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

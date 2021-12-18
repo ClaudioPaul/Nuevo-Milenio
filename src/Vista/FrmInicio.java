@@ -38,7 +38,7 @@ public class FrmInicio extends javax.swing.JFrame {
 
         jMenu1.setText("ALUMNOS");
 
-        btnAlumnos.setText("REGISTRO DE ALUMNOS");
+        btnAlumnos.setText("REGISTRAR DATOS DEL ALUMNO");
         jMenu1.add(btnAlumnos);
 
         jMenuBar1.add(jMenu1);

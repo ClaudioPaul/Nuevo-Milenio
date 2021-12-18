@@ -5,9 +5,9 @@
  */
 package Controlador;
 
-import Modelo.AlumnoDao;
-import Vista.FrmAlumno;
+import Modelo.PadreDao;
 import Vista.FrmInicio;
+import Vista.FrmRegistroPadre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,10 +27,14 @@ public class ControladorInicio implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
        if(ae.getSource() == inicio.btnAlumnos){
-           FrmAlumno alumno = new FrmAlumno();
-           AlumnoDao aDao = new AlumnoDao();
-           ControladorAlumno cona = new ControladorAlumno(alumno, aDao);
-           alumno.setVisible(true);
+           FrmRegistroPadre padre = new FrmRegistroPadre();
+           PadreDao padreD = new PadreDao();
+           ControladorPadre conP = new ControladorPadre(padre, padreD);
+           conP.CursorBuscar();
+           conP.CursorBuscar();
+           conP.BloquearRegistrar();
+           conP.BloquearUsar();
+           padre.setVisible(true);
        }
     }
     

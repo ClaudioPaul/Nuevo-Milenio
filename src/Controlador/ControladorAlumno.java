@@ -7,7 +7,6 @@ package Controlador;
 
 import Modelo.AlumnoDao;
 import Vista.FrmAlumno;
-import Vista.FrmRegistroPadre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
@@ -71,10 +70,7 @@ public class ControladorAlumno implements ActionListener{
         }
         
         if(ae.getSource() == alumno.btnContinual){
-            FrmRegistroPadre padre = new FrmRegistroPadre();
-            ControladorPadre conP = new ControladorPadre(padre);
-            alumno.dispose();
-            padre.setVisible(true);
+           
         }
         
     }

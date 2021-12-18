@@ -48,6 +48,7 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtDireccion = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         cmdApoderado = new javax.swing.JComboBox<>();
+        txtCodigo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -170,6 +171,8 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         cmdApoderado.setBorder(null);
         jPanel3.add(cmdApoderado);
         cmdApoderado.setBounds(140, 250, 200, 24);
+        jPanel3.add(txtCodigo);
+        txtCodigo.setBounds(30, 250, 50, 30);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(150, 70, 490, 300);
@@ -296,6 +299,7 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     public javax.swing.JTextField txtApellidomaterno;
     public javax.swing.JTextField txtApellidopaterno;
+    public javax.swing.JLabel txtCodigo;
     public javax.swing.JTextField txtCorreoE;
     public javax.swing.JTextField txtDireccion;
     public javax.swing.JTextField txtDni;
