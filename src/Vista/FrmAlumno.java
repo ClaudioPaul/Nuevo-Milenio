@@ -57,6 +57,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         txtDni = new javax.swing.JTextField();
         txtApellidomaterno = new javax.swing.JTextField();
         cmdSexo = new javax.swing.JComboBox<>();
+        dateNacimiento = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnGurdar = new javax.swing.JButton();
@@ -235,6 +236,8 @@ public class FrmAlumno extends javax.swing.JFrame {
         cmdSexo.setBorder(null);
         jPanel3.add(cmdSexo);
         cmdSexo.setBounds(30, 240, 200, 24);
+        jPanel3.add(dateNacimiento);
+        dateNacimiento.setBounds(260, 40, 200, 24);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(280, 90, 500, 280);
@@ -378,6 +381,7 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> cmdGrado1;
     public javax.swing.JComboBox<String> cmdNivel;
     public javax.swing.JComboBox<String> cmdSexo;
+    private com.toedter.calendar.JDateChooser dateNacimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
