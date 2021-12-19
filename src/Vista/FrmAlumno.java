@@ -35,6 +35,8 @@ public class FrmAlumno extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         cmdNivel = new javax.swing.JComboBox<>();
+        cmdSeccion = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         txtContacto = new javax.swing.JTextField();
@@ -85,33 +87,44 @@ public class FrmAlumno extends javax.swing.JFrame {
         cmdGrado1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", " " }));
         cmdGrado1.setBorder(null);
         jPanel4.add(cmdGrado1);
-        cmdGrado1.setBounds(10, 140, 180, 24);
+        cmdGrado1.setBounds(10, 110, 180, 24);
 
         txtVacante.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtVacante.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel4.add(txtVacante);
-        txtVacante.setBounds(10, 200, 180, 24);
+        txtVacante.setBounds(10, 230, 180, 24);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel16.setText("VACANTE:");
         jPanel4.add(jLabel16);
-        jLabel16.setBounds(10, 180, 60, 15);
+        jLabel16.setBounds(10, 210, 60, 15);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setText("GRADO:");
         jPanel4.add(jLabel15);
-        jLabel15.setBounds(10, 120, 50, 15);
+        jLabel15.setBounds(10, 90, 50, 15);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("NIVEL:");
         jPanel4.add(jLabel1);
-        jLabel1.setBounds(10, 60, 50, 15);
+        jLabel1.setBounds(10, 30, 50, 15);
 
         cmdNivel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmdNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "INICIAL", "PRIMARIA", "SECUNDARIA" }));
         cmdNivel.setBorder(null);
         jPanel4.add(cmdNivel);
-        cmdNivel.setBounds(10, 80, 180, 24);
+        cmdNivel.setBounds(10, 50, 180, 24);
+
+        cmdSeccion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmdSeccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", " " }));
+        cmdSeccion.setBorder(null);
+        jPanel4.add(cmdSeccion);
+        cmdSeccion.setBounds(10, 170, 180, 24);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel17.setText("SECCIÓN:");
+        jPanel4.add(jLabel17);
+        jLabel17.setBounds(10, 150, 70, 15);
 
         jPanel1.add(jPanel4);
         jPanel4.setBounds(30, 130, 210, 280);
@@ -382,6 +395,7 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JButton btnbuscar;
     public javax.swing.JComboBox<String> cmdGrado1;
     public javax.swing.JComboBox<String> cmdNivel;
+    public javax.swing.JComboBox<String> cmdSeccion;
     public javax.swing.JComboBox<String> cmdSexo;
     public com.toedter.calendar.JDateChooser dateNacimiento;
     private javax.swing.JLabel jLabel1;
@@ -390,6 +404,7 @@ public class FrmAlumno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
