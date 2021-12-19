@@ -69,10 +69,6 @@ public class ControladorAlumno implements ActionListener{
             alumno.dispose();
         }
         
-        if(ae.getSource() == alumno.btnContinual){
-           
-        }
-        
     }
     
 }
