@@ -52,13 +52,13 @@ public class PadreDao {
     }
     
     public String Registrar(String nombre, String apellidoP, String apellidoM, int dni, int telefono, 
-            int telefonoR, String correo, String Direccion){
+            int telefonoR, String correo, String Direccion, int apoderado, int pago){
         
         String rptaRegistro=null;
 
         try {
             Connection accesoBD = conexion.getConexion();
-            CallableStatement cs = accesoBD.prepareCall("{ call RegistrarPadre(?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = accesoBD.prepareCall("{ call RegistrarPadre(?,?,?,?,?,?,?,?,?,?)}");
             cs.setString(1, nombre);
             cs.setString(2, apellidoP);
             cs.setString(3, apellidoM);
@@ -67,6 +67,8 @@ public class PadreDao {
             cs.setInt(6, telefonoR);
             cs.setString(7, correo);
             cs.setString(8, Direccion);
+            cs.setInt(9, apoderado);
+            cs.setInt(10, pago);
 
             int numFAfectadas = cs.executeUpdate();
 
