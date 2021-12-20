@@ -218,26 +218,26 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("REGISTRAR");
         jPanel2.add(btnRegistrar);
-        btnRegistrar.setBounds(20, 50, 210, 30);
+        btnRegistrar.setBounds(20, 30, 210, 30);
 
         btnCancelar.setBackground(new java.awt.Color(174, 174, 174));
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete_01_24x24-32.gif"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         jPanel2.add(btnCancelar);
-        btnCancelar.setBounds(20, 130, 210, 30);
+        btnCancelar.setBounds(20, 110, 210, 30);
 
         btnUsar.setBackground(new java.awt.Color(174, 174, 174));
         btnUsar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnUsar.setText("USAR DATOS");
         jPanel2.add(btnUsar);
-        btnUsar.setBounds(20, 170, 210, 30);
+        btnUsar.setBounds(20, 150, 210, 30);
 
         btnSiguiente.setBackground(new java.awt.Color(174, 174, 174));
         btnSiguiente.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnSiguiente.setText("SIGUIENTE");
         jPanel2.add(btnSiguiente);
-        btnSiguiente.setBounds(20, 210, 210, 30);
+        btnSiguiente.setBounds(20, 240, 210, 30);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(760, 170, 250, 300);

@@ -7,6 +7,7 @@ package Controlador;
 
 import Modelo.AlumnoDao;
 import Vista.FrmAlumno;
+import Vista.FrmRegistroFinal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
@@ -67,6 +68,11 @@ public class ControladorAlumno implements ActionListener{
         }
         if(ae.getSource() == alumno.btnSalir){
             alumno.dispose();
+        }
+        
+        if(ae.getSource() == alumno.btnContinual){
+            FrmRegistroFinal r = new FrmRegistroFinal();
+            r.setVisible(true);
         }
         
     }

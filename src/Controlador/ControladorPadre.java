@@ -5,8 +5,10 @@
  */
 package Controlador;
 
+import Modelo.MadreDao;
 import Modelo.PadreDao;
 import Modelo.ValidarVacantesDao;
+import Vista.FrmRegistroMadre;
 import Vista.FrmRegistroPadre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,6 +41,8 @@ public class ControladorPadre implements ActionListener{
     
         
     public void limpiarTextos(){
+        padre.txtBuscar.setText("");
+        padre.txtDni.setText("");
         padre.txtTelefono.setText("");
         padre.txtTelefonoA.setText("");
         padre.txtNombre.setText("");
@@ -345,6 +349,52 @@ public class ControladorPadre implements ActionListener{
             }else{
                 JOptionPane.showMessageDialog(padre, "POR FAVOR INGRESE EL DNI A BUSCAR");
             }
+        }
+        
+        if(ae.getSource() == padre.btnRegistrar){
+            String nombres = padre.txtNombre.getText();
+            String apellidoP = padre.txtApellidopaterno.getText();
+            String apellidoM = padre.txtApellidomaterno.getText();
+            int Dni = Integer.parseInt(padre.txtDni.getText());
+            int Telefono = Integer.parseInt(padre.txtTelefono.getText());
+            int TelefonoR = Integer.parseInt(padre.txtTelefonoA.getText());
+            String correo = padre.txtCorreoE.getText();
+            String direccion = padre.txtDireccion.getText();
+            
+            int Apoderado;
+            int Pago;
+            
+            if(padre.txtApoderado.isSelected()){
+                Apoderado = 1;
+            }else{
+                Apoderado = 0;
+            }
+            
+            if(padre.txtPago.isSelected()){
+                Pago = 1;
+            }else{
+                Pago = 0;
+            }
+            
+            String rptaRegistro = padreD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Apoderado, Pago);
+            
+            if(rptaRegistro!=null){
+                JOptionPane.showMessageDialog(null, rptaRegistro);
+            }else{
+                JOptionPane.showMessageDialog(null, "ERROR EN REGISTRAR");
+            }
+        }
+        
+        if(ae.getSource() == padre.btnCancelar){
+            limpiarTextos();
+        }
+        
+        if(ae.getSource() == padre.btnSiguiente){
+            FrmRegistroMadre madre = new FrmRegistroMadre();
+            MadreDao madreD = new MadreDao();
+            ControladorMadre conM = new ControladorMadre(madre, madreD);
+            padre.dispose();
+            madre.setVisible(true); 
         }
         
     }

@@ -50,17 +50,16 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtApoderado = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
         txtPago = new javax.swing.JCheckBox();
-        jPanel2 = new javax.swing.JPanel();
-        btnEditarM = new javax.swing.JButton();
-        btnCancelarM = new javax.swing.JButton();
-        btnSiguiente = new javax.swing.JButton();
-        btnRegistrarM = new javax.swing.JButton();
-        btnUsarM = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
         btnbuscar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        btnRegistrar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnUsar = new javax.swing.JButton();
+        btnSiguiente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -115,17 +114,17 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtTelefono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtTelefono);
-        txtTelefono.setBounds(260, 40, 200, 24);
+        txtTelefono.setBounds(290, 40, 200, 24);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setText("TELÉFONO:");
         jPanel3.add(jLabel15);
-        jLabel15.setBounds(260, 20, 100, 15);
+        jLabel15.setBounds(290, 20, 100, 15);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("TELÉFONO ADICIONAL:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(260, 70, 160, 17);
+        jLabel6.setBounds(290, 70, 160, 17);
 
         txtTelefonoA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtTelefonoA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
@@ -135,27 +134,27 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtTelefonoA);
-        txtTelefonoA.setBounds(260, 90, 200, 24);
+        txtTelefonoA.setBounds(290, 90, 200, 24);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("CORREO ELECTRÓNICO:");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(260, 120, 170, 15);
+        jLabel7.setBounds(290, 120, 170, 15);
 
         txtCorreoE.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtCorreoE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtCorreoE);
-        txtCorreoE.setBounds(260, 140, 200, 24);
+        txtCorreoE.setBounds(290, 140, 200, 24);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("DIRECCIÓN:");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(260, 170, 80, 15);
+        jLabel8.setBounds(290, 170, 80, 15);
 
         txtDireccion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtDireccion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtDireccion);
-        txtDireccion.setBounds(260, 190, 200, 24);
+        txtDireccion.setBounds(290, 190, 200, 24);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("APELLIDO MATERNO:");
@@ -172,7 +171,7 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtApoderado.setBackground(new java.awt.Color(255, 255, 255));
         txtApoderado.setText("SI");
         jPanel3.add(txtApoderado);
-        txtApoderado.setBounds(120, 230, 40, 25);
+        txtApoderado.setBounds(120, 230, 40, 23);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("RESPONSABLE DE PAGO:");
@@ -182,50 +181,10 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtPago.setBackground(new java.awt.Color(255, 255, 255));
         txtPago.setText("SI");
         jPanel3.add(txtPago);
-        txtPago.setBounds(420, 230, 40, 25);
+        txtPago.setBounds(420, 230, 40, 23);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(110, 170, 490, 300);
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185), 2));
-        jPanel2.setLayout(null);
-
-        btnEditarM.setBackground(new java.awt.Color(174, 174, 174));
-        btnEditarM.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        btnEditarM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizar.png"))); // NOI18N
-        btnEditarM.setText("EDITAR");
-        jPanel2.add(btnEditarM);
-        btnEditarM.setBounds(70, 110, 170, 30);
-
-        btnCancelarM.setBackground(new java.awt.Color(174, 174, 174));
-        btnCancelarM.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        btnCancelarM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete_01_24x24-32.gif"))); // NOI18N
-        btnCancelarM.setText("CANCELAR");
-        jPanel2.add(btnCancelarM);
-        btnCancelarM.setBounds(70, 150, 170, 30);
-
-        btnSiguiente.setBackground(new java.awt.Color(174, 174, 174));
-        btnSiguiente.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        btnSiguiente.setText("SIGUIENTE");
-        jPanel2.add(btnSiguiente);
-        btnSiguiente.setBounds(70, 230, 170, 30);
-
-        btnRegistrarM.setBackground(new java.awt.Color(79, 59, 185));
-        btnRegistrarM.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        btnRegistrarM.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrarM.setText("REGISTRAR");
-        jPanel2.add(btnRegistrarM);
-        btnRegistrarM.setBounds(70, 70, 170, 30);
-
-        btnUsarM.setBackground(new java.awt.Color(174, 174, 174));
-        btnUsarM.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        btnUsarM.setText("USAR DATOS");
-        jPanel2.add(btnUsarM);
-        btnUsarM.setBounds(70, 190, 170, 30);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(610, 170, 310, 300);
+        jPanel3.setBounds(90, 170, 540, 300);
 
         jPanel4.setBackground(new java.awt.Color(79, 59, 185));
         jPanel4.setLayout(null);
@@ -258,6 +217,39 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel1.add(txtBuscar);
         txtBuscar.setBounds(640, 120, 280, 30);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185), 2));
+        jPanel2.setLayout(null);
+
+        btnRegistrar.setBackground(new java.awt.Color(79, 59, 185));
+        btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrar.setText("REGISTRAR");
+        jPanel2.add(btnRegistrar);
+        btnRegistrar.setBounds(20, 30, 210, 30);
+
+        btnCancelar.setBackground(new java.awt.Color(174, 174, 174));
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete_01_24x24-32.gif"))); // NOI18N
+        btnCancelar.setText("CANCELAR");
+        jPanel2.add(btnCancelar);
+        btnCancelar.setBounds(20, 110, 210, 30);
+
+        btnUsar.setBackground(new java.awt.Color(174, 174, 174));
+        btnUsar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        btnUsar.setText("USAR DATOS");
+        jPanel2.add(btnUsar);
+        btnUsar.setBounds(20, 150, 210, 30);
+
+        btnSiguiente.setBackground(new java.awt.Color(174, 174, 174));
+        btnSiguiente.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        btnSiguiente.setText("SIGUIENTE");
+        jPanel2.add(btnSiguiente);
+        btnSiguiente.setBounds(20, 240, 210, 30);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(670, 170, 250, 300);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -319,12 +311,11 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnCancelarM;
-    public javax.swing.JButton btnEditarM;
-    public javax.swing.JButton btnRegistrarM;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnRegistrar;
     public javax.swing.JButton btnSalir;
     public javax.swing.JButton btnSiguiente;
-    public javax.swing.JButton btnUsarM;
+    public javax.swing.JButton btnUsar;
     public javax.swing.JButton btnbuscar;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

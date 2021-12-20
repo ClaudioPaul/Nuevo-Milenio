@@ -33,7 +33,7 @@ public class ControladorInicio implements ActionListener{
            ValidarVacantesDao valD = new ValidarVacantesDao();
            ControladorPadre conP = new ControladorPadre(padre, padreD, valD);
            conP.limpiarTextos();
-           conP.BloquearPadre();
+//           conP.BloquearPadre();
            padre.setVisible(true);
        }
     }
