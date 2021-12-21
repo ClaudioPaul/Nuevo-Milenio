@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.ApoderadoDao;
 import Modelo.MadreDao;
 import Modelo.PadreDao;
 import Modelo.ValidarVacantesDao;
@@ -22,12 +23,14 @@ public class ControladorPadre implements ActionListener{
     
     FrmRegistroPadre padre  = new FrmRegistroPadre();
     PadreDao padreD = new PadreDao();
+    ApoderadoDao apoD = new ApoderadoDao();
     ValidarVacantesDao valD  = new ValidarVacantesDao();
     
-    public ControladorPadre(FrmRegistroPadre padre, PadreDao padreD, ValidarVacantesDao valD){
+    public ControladorPadre(FrmRegistroPadre padre, PadreDao padreD, ValidarVacantesDao valD, ApoderadoDao apoD){
         this.padreD = padreD;
         this.padre = padre;
         this.valD = valD;
+        this.apoD = apoD;
         this.padre.btnRegistrar.addActionListener(this);
         this.padre.btnSalir.addActionListener(this);
         this.padre.btnbuscar.addActionListener(this);
@@ -376,10 +379,22 @@ public class ControladorPadre implements ActionListener{
                 Pago = 0;
             }
             
+            String Parentezco = "PADRE";
+            
             String rptaRegistro = padreD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Apoderado, Pago);
+            
+            String rptaRegistroA = null;
+            
+            if(Apoderado == 1){
+                 rptaRegistroA = apoD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Parentezco, Pago);
+            }
             
             if(rptaRegistro!=null){
                 JOptionPane.showMessageDialog(null, rptaRegistro);
+               if(rptaRegistroA !=null){
+                   JOptionPane.showMessageDialog(null, rptaRegistroA);
+               }
+               limpiarTextos();
             }else{
                 JOptionPane.showMessageDialog(null, "ERROR EN REGISTRAR");
             }
@@ -392,7 +407,7 @@ public class ControladorPadre implements ActionListener{
         if(ae.getSource() == padre.btnSiguiente){
             FrmRegistroMadre madre = new FrmRegistroMadre();
             MadreDao madreD = new MadreDao();
-            ControladorMadre conM = new ControladorMadre(madre, madreD);
+            ControladorMadre conM = new ControladorMadre(madre, madreD,apoD);
             padre.dispose();
             madre.setVisible(true); 
         }

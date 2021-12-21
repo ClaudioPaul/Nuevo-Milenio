@@ -26,11 +26,7 @@ public class ControladorAlumno implements ActionListener{
         this.alumno = alumno;
         this.aDao = aDao;
         this.alumno.btnGurdar.addActionListener(this);
-        this.alumno.btnNuevo.addActionListener(this);
         this.alumno.btnCancelar.addActionListener(this);
-        this.alumno.btnEditar.addActionListener(this);
-        this.alumno.btnEliminar.addActionListener(this);
-        this.alumno.btnbuscar.addActionListener(this);
         this.alumno.btnSalir.addActionListener(this);
         this.alumno.btnContinual.addActionListener(this);
     }
@@ -51,14 +47,23 @@ public class ControladorAlumno implements ActionListener{
                int dia = alumno.dateNacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
               
              String fechaNacimiento =(año+"-"+mes+"-"+dia);
+             
+             
+            int edad = Integer.parseInt(alumno.txtEdad.getText());
             
             String antecedentes = alumno.txtAntecedentes.getText();
             String tratamiento = alumno.txtTratamiento.getText();
+            String viveCon = alumno.txtViveCon.getText();
             int numeroEmergencia = Integer.parseInt(alumno.txtNEmergencia.getText());
             String Contacto = alumno.txtContacto.getText();
+            String Parentezco = alumno.txtParentezco.getText();
             
-            String rptaRegistro = aDao.Registrar(dni, nombres, apellidoP, apellidoM, sexo, 
-                    fechaNacimiento, antecedentes, tratamiento, numeroEmergencia, Contacto);
+            int Padre = Integer.parseInt(alumno.txtCpadre.getText());
+            int Madre = Integer.parseInt(alumno.txtCmadre.getText());
+            int Apoderado = Integer.parseInt(alumno.txtCapoderado.getText());
+            
+            String rptaRegistro = aDao.Registrar(dni, nombres, apellidoP, apellidoM, sexo,fechaNacimiento, edad, 
+                    antecedentes, tratamiento, viveCon , numeroEmergencia, Contacto, Parentezco,Padre, Madre, Apoderado);
             
             if(rptaRegistro!=null){
                 JOptionPane.showMessageDialog(null, rptaRegistro);

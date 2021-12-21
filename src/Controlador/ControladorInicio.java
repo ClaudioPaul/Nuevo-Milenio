@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.ApoderadoDao;
 import Modelo.PadreDao;
 import Modelo.ValidarVacantesDao;
 import Vista.FrmInicio;
@@ -30,8 +31,9 @@ public class ControladorInicio implements ActionListener{
        if(ae.getSource() == inicio.btnAlumnos){
            FrmRegistroPadre padre = new FrmRegistroPadre();
            PadreDao padreD = new PadreDao();
+           ApoderadoDao apoD = new ApoderadoDao();
            ValidarVacantesDao valD = new ValidarVacantesDao();
-           ControladorPadre conP = new ControladorPadre(padre, padreD, valD);
+           ControladorPadre conP = new ControladorPadre(padre, padreD, valD,apoD);
            conP.limpiarTextos();
 //           conP.BloquearPadre();
            padre.setVisible(true);

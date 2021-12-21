@@ -20,24 +20,30 @@ public class AlumnoDao {
     }
     
     public String Registrar(int dni, String nombres, String apellidoP, String apellidoM, 
-            String sexo, String fechaNacimiento, String antecedentes, 
-            String tratamiento, int numeroEmergencia, String contacto){
+            String sexo, String fechaNacimiento, int edad, String antecedentes, 
+            String tratamiento, String viveCon, int numeroEmergencia, String contacto, String Parentezco, int padre, int madre, int apoderado){
         
         String rptaRegistro=null;
 
         try {
             Connection accesoBD = conexion.getConexion();
-            CallableStatement cs = accesoBD.prepareCall("{ call RegistrarAlumno(?,?,?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = accesoBD.prepareCall("{ call RegistrarAlumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setString(1, nombres);
             cs.setString(2, apellidoP);
             cs.setString(3, apellidoM);
             cs.setInt(4, dni);
             cs.setString(5, sexo);
             cs.setString(6, fechaNacimiento);
+            cs.setInt(7, edad);
             cs.setString(7, antecedentes);
             cs.setString(8, tratamiento);
-            cs.setInt(9, numeroEmergencia);
-            cs.setString(10, contacto);
+            cs.setString(9, viveCon);
+            cs.setInt(10, numeroEmergencia);
+            cs.setString(11, contacto);
+            cs.setString(12, Parentezco);
+            cs.setInt(13, padre);
+            cs.setInt(14, madre);
+            cs.setInt(15, apoderado);
 
             int numFAfectadas = cs.executeUpdate();
 

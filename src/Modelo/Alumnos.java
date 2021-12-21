@@ -19,13 +19,18 @@ public class Alumnos {
     private String fechaNacimiento;
     private String antecedentes;
     private String tratamiento;
+    private String viveCon;
     private int numeroEmergencia;
     private String contacto;
+    private String parentezco;
+    private int Padre;
+    private int Madre;
+    private int Apoderado;
 
     public Alumnos() {
     }
 
-    public Alumnos(int idAlumno, int dni, String nombres, String apellidoP, String apellidoM, String sexo, String fechaNacimiento, String antecedentes, String tratamiento, int numeroEmergencia, String contacto) {
+    public Alumnos(int idAlumno, int dni, String nombres, String apellidoP, String apellidoM, String sexo, String fechaNacimiento, String antecedentes, String tratamiento, String viveCon, int numeroEmergencia, String contacto, String parentezco, int Padre, int Madre, int Apoderado) {
         this.idAlumno = idAlumno;
         this.dni = dni;
         this.nombres = nombres;
@@ -35,8 +40,13 @@ public class Alumnos {
         this.fechaNacimiento = fechaNacimiento;
         this.antecedentes = antecedentes;
         this.tratamiento = tratamiento;
+        this.viveCon = viveCon;
         this.numeroEmergencia = numeroEmergencia;
         this.contacto = contacto;
+        this.parentezco = parentezco;
+        this.Padre = Padre;
+        this.Madre = Madre;
+        this.Apoderado = Apoderado;
     }
 
     public int getIdAlumno() {
@@ -111,6 +121,14 @@ public class Alumnos {
         this.tratamiento = tratamiento;
     }
 
+    public String getViveCon() {
+        return viveCon;
+    }
+
+    public void setViveCon(String viveCon) {
+        this.viveCon = viveCon;
+    }
+
     public int getNumeroEmergencia() {
         return numeroEmergencia;
     }
@@ -126,6 +144,39 @@ public class Alumnos {
     public void setContacto(String contacto) {
         this.contacto = contacto;
     }
+
+    public String getParentezco() {
+        return parentezco;
+    }
+
+    public void setParentezco(String parentezco) {
+        this.parentezco = parentezco;
+    }
+
+    public int getPadre() {
+        return Padre;
+    }
+
+    public void setPadre(int Padre) {
+        this.Padre = Padre;
+    }
+
+    public int getMadre() {
+        return Madre;
+    }
+
+    public void setMadre(int Madre) {
+        this.Madre = Madre;
+    }
+
+    public int getApoderado() {
+        return Apoderado;
+    }
+
+    public void setApoderado(int Apoderado) {
+        this.Apoderado = Apoderado;
+    }
+
     
     
 }

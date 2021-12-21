@@ -21,10 +21,12 @@ public class ControladorMadre implements ActionListener{
     
     FrmRegistroMadre madre  = new FrmRegistroMadre();
     MadreDao madreD = new MadreDao();
+    ApoderadoDao apoD = new ApoderadoDao();
     
-    public ControladorMadre(FrmRegistroMadre madre, MadreDao madreD){
+    public ControladorMadre(FrmRegistroMadre madre, MadreDao madreD, ApoderadoDao apoD){
         this.madre = madre;
         this.madreD = madreD;
+        this.apoD = apoD;
         this.madre.btnRegistrar.addActionListener(this);
         this.madre.btnSalir.addActionListener(this);
         this.madre.btnbuscar.addActionListener(this);
@@ -129,10 +131,21 @@ public class ControladorMadre implements ActionListener{
                 Pago = 0;
             }
             
+            String Parentezco = "MADRE";
+            
             String rptaRegistro = madreD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Apoderado, Pago);
+            
+            String rptaRegistroA = null;
+            
+            if(Apoderado == 1){
+                 rptaRegistroA = apoD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Parentezco, Pago);
+            }
             
             if(rptaRegistro!=null){
                 JOptionPane.showMessageDialog(null, rptaRegistro);
+                if(rptaRegistroA !=null){
+                   JOptionPane.showMessageDialog(null, rptaRegistroA);
+                }
                 limpiarTextos();
             }else{
                 JOptionPane.showMessageDialog(null, "ERROR EN REGISTRAR");
