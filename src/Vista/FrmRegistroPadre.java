@@ -55,7 +55,6 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         btnRegistrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        btnUsar = new javax.swing.JButton();
         btnSiguiente = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -69,6 +68,7 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         cmdNivel = new javax.swing.JComboBox<>();
         cmdSeccion = new javax.swing.JComboBox<>();
         jLabel18 = new javax.swing.JLabel();
+        btnVacante = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -216,7 +216,7 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         btnRegistrar.setBackground(new java.awt.Color(79, 59, 185));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrar.setText("REGISTRAR");
+        btnRegistrar.setText("GRABAR");
         jPanel2.add(btnRegistrar);
         btnRegistrar.setBounds(20, 30, 210, 30);
 
@@ -225,19 +225,13 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete_01_24x24-32.gif"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         jPanel2.add(btnCancelar);
-        btnCancelar.setBounds(20, 110, 210, 30);
-
-        btnUsar.setBackground(new java.awt.Color(174, 174, 174));
-        btnUsar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        btnUsar.setText("USAR DATOS");
-        jPanel2.add(btnUsar);
-        btnUsar.setBounds(20, 150, 210, 30);
+        btnCancelar.setBounds(30, 130, 210, 30);
 
         btnSiguiente.setBackground(new java.awt.Color(174, 174, 174));
         btnSiguiente.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnSiguiente.setText("SIGUIENTE");
         jPanel2.add(btnSiguiente);
-        btnSiguiente.setBounds(20, 240, 210, 30);
+        btnSiguiente.setBounds(30, 230, 210, 30);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(760, 170, 250, 300);
@@ -308,6 +302,12 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
         jPanel5.add(jLabel18);
         jLabel18.setBounds(10, 150, 70, 15);
 
+        btnVacante.setBackground(new java.awt.Color(174, 174, 174));
+        btnVacante.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        btnVacante.setText("REGISTRAR");
+        jPanel5.add(btnVacante);
+        btnVacante.setBounds(10, 260, 180, 30);
+
         jPanel1.add(jPanel5);
         jPanel5.setBounds(40, 170, 210, 300);
 
@@ -374,7 +374,7 @@ public class FrmRegistroPadre extends javax.swing.JFrame {
     public javax.swing.JButton btnRegistrar;
     public javax.swing.JButton btnSalir;
     public javax.swing.JButton btnSiguiente;
-    public javax.swing.JButton btnUsar;
+    public javax.swing.JButton btnVacante;
     public javax.swing.JButton btnbuscar;
     public javax.swing.JComboBox<String> cmdGrado1;
     public javax.swing.JComboBox<String> cmdNivel;

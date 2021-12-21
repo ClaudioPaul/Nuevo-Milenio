@@ -79,4 +79,17 @@ public class PadreDao {
         }
         return rptaRegistro;
     }
+    
+    public int ActualizarVacante(int Matriculados, int idGrado){
+        int numFA =0;
+        try {
+            Connection accesoBD = conexion.getConexion();
+            CallableStatement cs = accesoBD.prepareCall("{ call ActualizarVacante(?,?)}");
+            cs.setInt(1, Matriculados);
+            cs.setInt(2, idGrado);
+            numFA = cs.executeUpdate();
+        } catch (Exception e) {
+        }
+        return numFA;
+    }
 }

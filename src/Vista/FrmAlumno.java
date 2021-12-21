@@ -61,6 +61,12 @@ public class FrmAlumno extends javax.swing.JFrame {
         txtViveCon = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         txtEdad = new javax.swing.JTextField();
+        btnbuscarPadre = new javax.swing.JButton();
+        txtBuscarPadre = new javax.swing.JTextField();
+        btnbuscarMadre = new javax.swing.JButton();
+        txtBuscarMadre = new javax.swing.JTextField();
+        txtBuscarApoderado = new javax.swing.JTextField();
+        btnbuscarApoderado = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnGurdar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
@@ -84,7 +90,7 @@ public class FrmAlumno extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("PARENTEZCO:");
         jPanel3.add(jLabel10);
-        jLabel10.setBounds(400, 260, 170, 15);
+        jLabel10.setBounds(520, 280, 170, 15);
 
         txtContacto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtContacto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
@@ -94,47 +100,47 @@ public class FrmAlumno extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtContacto);
-        txtContacto.setBounds(400, 230, 200, 24);
+        txtContacto.setBounds(520, 250, 200, 24);
 
         txtNEmergencia.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtNEmergencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtNEmergencia);
-        txtNEmergencia.setBounds(400, 180, 200, 24);
+        txtNEmergencia.setBounds(520, 200, 200, 24);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("NUMERO DE EMERGENCIA:");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(400, 160, 160, 15);
+        jLabel9.setBounds(520, 180, 160, 15);
 
         txtTratamiento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtTratamiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtTratamiento);
-        txtTratamiento.setBounds(400, 130, 200, 24);
+        txtTratamiento.setBounds(520, 150, 200, 24);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("TRATAMIENTO:");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(400, 110, 140, 15);
+        jLabel8.setBounds(520, 130, 140, 15);
 
         txtAntecedentes.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtAntecedentes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtAntecedentes);
-        txtAntecedentes.setBounds(400, 80, 200, 24);
+        txtAntecedentes.setBounds(520, 100, 200, 24);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("ANTECEDENTES DE SALUD:");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(400, 60, 190, 15);
+        jLabel7.setBounds(520, 80, 190, 15);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("FECHA DE NACIMIENTO:");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(400, 10, 150, 15);
+        jLabel6.setBounds(520, 30, 150, 15);
 
         txtApellidopaterno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtApellidopaterno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtApellidopaterno);
-        txtApellidopaterno.setBounds(170, 130, 200, 24);
+        txtApellidopaterno.setBounds(290, 150, 200, 24);
 
         txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
@@ -144,76 +150,76 @@ public class FrmAlumno extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtNombre);
-        txtNombre.setBounds(170, 80, 200, 24);
+        txtNombre.setBounds(290, 100, 200, 24);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("SEXO:");
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(170, 210, 50, 15);
+        jLabel5.setBounds(290, 230, 50, 15);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("APELLIDO MATERNO:");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(170, 160, 140, 15);
+        jLabel4.setBounds(290, 180, 140, 15);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("APELLIDO PATERNO:");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(170, 110, 130, 15);
+        jLabel3.setBounds(290, 130, 130, 15);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("NOMBRES:");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(170, 60, 80, 17);
+        jLabel2.setBounds(290, 80, 80, 17);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setText("C. APODERADO");
         jPanel3.add(jLabel14);
-        jLabel14.setBounds(20, 150, 100, 15);
+        jLabel14.setBounds(150, 210, 100, 15);
 
         txtDni.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtDni.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtDni);
-        txtDni.setBounds(170, 30, 200, 24);
+        txtDni.setBounds(290, 50, 200, 24);
 
         txtApellidomaterno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtApellidomaterno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
         jPanel3.add(txtApellidomaterno);
-        txtApellidomaterno.setBounds(170, 180, 200, 24);
+        txtApellidomaterno.setBounds(290, 200, 200, 24);
 
         cmdSexo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmdSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR", "MASCULINO", "FEMENINO", " " }));
         cmdSexo.setBorder(null);
         jPanel3.add(cmdSexo);
-        cmdSexo.setBounds(170, 230, 200, 24);
+        cmdSexo.setBounds(290, 250, 200, 24);
         jPanel3.add(dateNacimiento);
-        dateNacimiento.setBounds(400, 30, 200, 24);
+        dateNacimiento.setBounds(520, 50, 200, 24);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setText("DNI:");
         jPanel3.add(jLabel15);
-        jLabel15.setBounds(170, 10, 40, 15);
+        jLabel15.setBounds(290, 30, 40, 15);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel16.setText("C. PADRE");
         jPanel3.add(jLabel16);
-        jLabel16.setBounds(20, 30, 70, 15);
+        jLabel16.setBounds(150, 10, 70, 15);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel17.setText("C. MADRE");
         jPanel3.add(jLabel17);
-        jLabel17.setBounds(20, 90, 70, 15);
+        jLabel17.setBounds(150, 120, 70, 15);
         jPanel3.add(txtCpadre);
-        txtCpadre.setBounds(40, 60, 0, 0);
+        txtCpadre.setBounds(160, 40, 40, 20);
         jPanel3.add(txtCmadre);
-        txtCmadre.setBounds(40, 120, 0, 0);
+        txtCmadre.setBounds(160, 140, 40, 30);
         jPanel3.add(txtCapoderado);
-        txtCapoderado.setBounds(40, 180, 34, 14);
+        txtCapoderado.setBounds(160, 230, 34, 30);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("NOMBRE DE CONTACTO:");
         jPanel3.add(jLabel12);
-        jLabel12.setBounds(400, 210, 170, 15);
+        jLabel12.setBounds(520, 230, 170, 15);
 
         txtParentezco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtParentezco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
@@ -223,12 +229,12 @@ public class FrmAlumno extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtParentezco);
-        txtParentezco.setBounds(400, 280, 200, 24);
+        txtParentezco.setBounds(520, 300, 200, 24);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setText("VIVE CON:");
         jPanel3.add(jLabel13);
-        jLabel13.setBounds(170, 260, 170, 15);
+        jLabel13.setBounds(290, 280, 170, 15);
 
         txtViveCon.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtViveCon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
@@ -238,12 +244,12 @@ public class FrmAlumno extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtViveCon);
-        txtViveCon.setBounds(170, 280, 200, 24);
+        txtViveCon.setBounds(290, 300, 200, 24);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel18.setText("EDAD:");
         jPanel3.add(jLabel18);
-        jLabel18.setBounds(20, 210, 100, 15);
+        jLabel18.setBounds(190, 280, 100, 15);
 
         txtEdad.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtEdad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
@@ -253,10 +259,46 @@ public class FrmAlumno extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtEdad);
-        txtEdad.setBounds(20, 230, 50, 24);
+        txtEdad.setBounds(190, 300, 50, 24);
+
+        btnbuscarPadre.setBackground(new java.awt.Color(79, 59, 185));
+        btnbuscarPadre.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnbuscarPadre.setForeground(new java.awt.Color(255, 255, 255));
+        btnbuscarPadre.setText("BUSCAR");
+        jPanel3.add(btnbuscarPadre);
+        btnbuscarPadre.setBounds(10, 10, 110, 30);
+
+        txtBuscarPadre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBuscarPadre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
+        jPanel3.add(txtBuscarPadre);
+        txtBuscarPadre.setBounds(10, 50, 110, 30);
+
+        btnbuscarMadre.setBackground(new java.awt.Color(79, 59, 185));
+        btnbuscarMadre.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnbuscarMadre.setForeground(new java.awt.Color(255, 255, 255));
+        btnbuscarMadre.setText("BUSCAR");
+        jPanel3.add(btnbuscarMadre);
+        btnbuscarMadre.setBounds(10, 110, 110, 30);
+
+        txtBuscarMadre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBuscarMadre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
+        jPanel3.add(txtBuscarMadre);
+        txtBuscarMadre.setBounds(10, 150, 110, 30);
+
+        txtBuscarApoderado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBuscarApoderado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
+        jPanel3.add(txtBuscarApoderado);
+        txtBuscarApoderado.setBounds(10, 240, 110, 30);
+
+        btnbuscarApoderado.setBackground(new java.awt.Color(79, 59, 185));
+        btnbuscarApoderado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnbuscarApoderado.setForeground(new java.awt.Color(255, 255, 255));
+        btnbuscarApoderado.setText("BUSCAR");
+        jPanel3.add(btnbuscarApoderado);
+        btnbuscarApoderado.setBounds(10, 200, 110, 30);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(100, 100, 610, 330);
+        jPanel3.setBounds(30, 80, 740, 350);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185), 2));
@@ -275,17 +317,17 @@ public class FrmAlumno extends javax.swing.JFrame {
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Delete_01_24x24-32.gif"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         jPanel2.add(btnCancelar);
-        btnCancelar.setBounds(40, 140, 150, 30);
+        btnCancelar.setBounds(40, 150, 150, 30);
 
         btnContinual.setBackground(new java.awt.Color(174, 174, 174));
         btnContinual.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnContinual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/diskette_save_saveas_1514.png"))); // NOI18N
         btnContinual.setText("CONTINUAR");
         jPanel2.add(btnContinual);
-        btnContinual.setBounds(40, 220, 150, 30);
+        btnContinual.setBounds(40, 260, 150, 30);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(720, 100, 220, 320);
+        jPanel2.setBounds(780, 80, 220, 350);
 
         jPanel5.setBackground(new java.awt.Color(79, 59, 185));
         jPanel5.setLayout(null);
@@ -381,6 +423,9 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JButton btnContinual;
     public javax.swing.JButton btnGurdar;
     public javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnbuscarApoderado;
+    public javax.swing.JButton btnbuscarMadre;
+    public javax.swing.JButton btnbuscarPadre;
     public javax.swing.JComboBox<String> cmdSexo;
     public com.toedter.calendar.JDateChooser dateNacimiento;
     private javax.swing.JLabel jLabel10;
@@ -407,6 +452,9 @@ public class FrmAlumno extends javax.swing.JFrame {
     public javax.swing.JTextField txtAntecedentes;
     public javax.swing.JTextField txtApellidomaterno;
     public javax.swing.JTextField txtApellidopaterno;
+    public javax.swing.JTextField txtBuscarApoderado;
+    public javax.swing.JTextField txtBuscarMadre;
+    public javax.swing.JTextField txtBuscarPadre;
     public javax.swing.JLabel txtCapoderado;
     public javax.swing.JLabel txtCmadre;
     public javax.swing.JTextField txtContacto;

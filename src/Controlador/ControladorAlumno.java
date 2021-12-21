@@ -6,6 +6,10 @@
 package Controlador;
 
 import Modelo.AlumnoDao;
+import Modelo.ApoderadoDao;
+import Modelo.MadreDao;
+import Modelo.MatriculaDao;
+import Modelo.PadreDao;
 import Vista.FrmAlumno;
 import Vista.FrmRegistroFinal;
 import java.awt.event.ActionEvent;
@@ -21,18 +25,82 @@ public class ControladorAlumno implements ActionListener{
     
     FrmAlumno alumno = new FrmAlumno();
     AlumnoDao aDao = new AlumnoDao();
+    ApoderadoDao apoD = new ApoderadoDao();
+    PadreDao pDao = new PadreDao();
+    MadreDao mDao = new MadreDao();
     
-    public ControladorAlumno(FrmAlumno alumno, AlumnoDao aDao){
+    public ControladorAlumno(FrmAlumno alumno, AlumnoDao aDao, ApoderadoDao apoD, PadreDao pDao, MadreDao mDao){
         this.alumno = alumno;
         this.aDao = aDao;
+        this.apoD = apoD;
+        this.pDao = pDao;
+        this.mDao = mDao;
         this.alumno.btnGurdar.addActionListener(this);
         this.alumno.btnCancelar.addActionListener(this);
         this.alumno.btnSalir.addActionListener(this);
         this.alumno.btnContinual.addActionListener(this);
+        this.alumno.btnbuscarApoderado.addActionListener(this);
+        this.alumno.btnbuscarPadre.addActionListener(this);
+        this.alumno.btnbuscarMadre.addActionListener(this);
+    }
+    
+    public int BuscarPadre(int dni){
+        int numRegistros = pDao.BuscarPadres(dni).size();
+        return numRegistros;
+    }
+    
+    public int BuscarMadre(int dni){
+        int numRegistros = mDao.BuscarMadres(dni).size();
+        return numRegistros;
+    }
+    
+    public int BuscarApoderado(int dni){
+        int numRegistros = apoD.BuscarApoderado(dni).size();
+        return numRegistros;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
+        
+        if(ae.getSource() == alumno.btnbuscarPadre){
+            if(alumno.txtBuscarPadre.getText().trim().length()!=0){
+                int dni = Integer.parseInt(alumno.txtBuscarPadre.getText());
+                if(BuscarPadre(dni)>0){
+                    for(int i = 0; i<BuscarPadre(dni); i++){
+                        alumno.txtCpadre.setText(String.valueOf(pDao.BuscarPadres(dni).get(i).getIdPadre()));
+                    }
+                }         
+            }else{
+                JOptionPane.showMessageDialog(null, "POR FAVOR INGRESE EL DNI DEL PADRE A BUSCAR");
+            }
+        }
+        
+        if(ae.getSource() == alumno.btnbuscarMadre){
+            if(alumno.txtBuscarMadre.getText().trim().length()!=0){
+                int dni = Integer.parseInt(alumno.txtBuscarMadre.getText());
+                if(BuscarMadre(dni)>0){
+                    for(int i = 0; i<BuscarMadre(dni); i++){
+                        alumno.txtCmadre.setText(String.valueOf(mDao.BuscarMadres(dni).get(i).getIdMadre()));
+                    }
+                }         
+            }else{
+                JOptionPane.showMessageDialog(null, "POR FAVOR INGRESE EL DNI DE LA MADRE A BUSCAR");
+            }
+        }
+        
+        if(ae.getSource() == alumno.btnbuscarApoderado){
+            if(alumno.txtBuscarApoderado.getText().trim().length()!=0){
+                int dni = Integer.parseInt(alumno.txtBuscarApoderado.getText());
+                if(BuscarPadre(dni)>0){
+                    for(int i = 0; i<BuscarApoderado(dni); i++){
+                        alumno.txtCapoderado.setText(String.valueOf(apoD.BuscarApoderado(dni).get(i).getIdApoderado()));
+                    }
+                }         
+            }else{
+                JOptionPane.showMessageDialog(null, "POR FAVOR INGRESE EL DNI DEL APODERADO A BUSCAR");
+            }
+        }
+        
         if(ae.getSource() == alumno.btnGurdar){
             
             int dni = Integer.parseInt(alumno.txtDni.getText());
@@ -62,8 +130,8 @@ public class ControladorAlumno implements ActionListener{
             int Madre = Integer.parseInt(alumno.txtCmadre.getText());
             int Apoderado = Integer.parseInt(alumno.txtCapoderado.getText());
             
-            String rptaRegistro = aDao.Registrar(dni, nombres, apellidoP, apellidoM, sexo,fechaNacimiento, edad, 
-                    antecedentes, tratamiento, viveCon , numeroEmergencia, Contacto, Parentezco,Padre, Madre, Apoderado);
+            String rptaRegistro = aDao.Registrar(nombres, apellidoP, apellidoM, dni, sexo, fechaNacimiento, edad, 
+                    antecedentes, tratamiento, viveCon, numeroEmergencia, Contacto, Parentezco, Padre, Madre, Apoderado);
             
             if(rptaRegistro!=null){
                 JOptionPane.showMessageDialog(null, rptaRegistro);
@@ -77,6 +145,9 @@ public class ControladorAlumno implements ActionListener{
         
         if(ae.getSource() == alumno.btnContinual){
             FrmRegistroFinal r = new FrmRegistroFinal();
+            MatriculaDao mDao = new MatriculaDao();
+            ControladorMatricula conM= new ControladorMatricula(r, mDao);
+            alumno.dispose();
             r.setVisible(true);
         }
         

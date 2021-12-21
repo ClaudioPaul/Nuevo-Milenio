@@ -35,6 +35,7 @@ public class ValidarVacantesDao {
             ResultSet rs = cs.executeQuery();
             while(rs.next()){
                 vacante = new ValidarVacantes();
+                vacante.setCodigo(rs.getInt(1));
                 vacante.setCantidad(rs.getInt(3));
                 vacante.setMatriculados(rs.getInt(6));
                 vacantes.add(vacante);

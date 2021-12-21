@@ -225,7 +225,7 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         btnRegistrar.setBackground(new java.awt.Color(79, 59, 185));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrar.setText("REGISTRAR");
+        btnRegistrar.setText("GRABAR");
         jPanel2.add(btnRegistrar);
         btnRegistrar.setBounds(20, 30, 210, 30);
 

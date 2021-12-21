@@ -7,6 +7,8 @@ package Modelo;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,6 +20,7 @@ public class ApoderadoDao {
     public ApoderadoDao() {
         conexion = new Conexion();
     }
+    
     
     public String Registrar(String nombre, String apellidoP, String apellidoM, int dni, int telefono, 
             int telefonoR, String correo, String Direccion, String Parentezco, int pago){
@@ -48,5 +51,24 @@ public class ApoderadoDao {
         return rptaRegistro;
     }
     
+    public ArrayList<Apoderado> BuscarApoderado(int dni){
+        ArrayList<Apoderado> listaApoderado =new ArrayList();
+        Apoderado apoderado;
+        try {
+            Connection accesoBD = conexion.getConexion();
+            CallableStatement cs = accesoBD.prepareCall("{ call BuscarApoderado (?)}");
+            cs.setInt(1, dni);
+            ResultSet rs = cs.executeQuery();
+            while(rs.next()){
+                apoderado = new Apoderado();
+                apoderado.setIdApoderado(rs.getInt(1));
+                listaApoderado.add(apoderado);
+                int numFAfectadas = cs.executeUpdate();
+            }
+        } catch (Exception e) {
+            
+        }
+        return listaApoderado;
+    }
     
 }

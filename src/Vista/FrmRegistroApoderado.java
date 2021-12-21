@@ -49,6 +49,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         txtApoderado = new javax.swing.JCheckBox();
+        txtCodigoApo = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         txtPago = new javax.swing.JCheckBox();
@@ -58,6 +59,8 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         btnUsar = new javax.swing.JButton();
         btnSiguiente = new javax.swing.JButton();
+        txtBuscar = new javax.swing.JTextField();
+        btnbuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -178,6 +181,8 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         txtApoderado.setText("SI");
         jPanel3.add(txtApoderado);
         txtApoderado.setBounds(420, 230, 40, 23);
+        jPanel3.add(txtCodigoApo);
+        txtCodigoApo.setBounds(30, 280, 0, 0);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(110, 170, 490, 300);
@@ -218,7 +223,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
         btnRegistrar.setBackground(new java.awt.Color(79, 59, 185));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrar.setText("REGISTRAR");
+        btnRegistrar.setText("GRABAR");
         jPanel2.add(btnRegistrar);
         btnRegistrar.setBounds(20, 30, 210, 30);
 
@@ -243,6 +248,19 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(670, 170, 250, 300);
+
+        txtBuscar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 59, 185)));
+        jPanel1.add(txtBuscar);
+        txtBuscar.setBounds(640, 120, 280, 30);
+
+        btnbuscar.setBackground(new java.awt.Color(79, 59, 185));
+        btnbuscar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnbuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/buscar.png"))); // NOI18N
+        btnbuscar.setText("BUSCAR");
+        jPanel1.add(btnbuscar);
+        btnbuscar.setBounds(510, 120, 120, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -313,6 +331,7 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
     public javax.swing.JButton btnSalir;
     public javax.swing.JButton btnSiguiente;
     public javax.swing.JButton btnUsar;
+    public javax.swing.JButton btnbuscar;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -331,6 +350,8 @@ public class FrmRegistroApoderado extends javax.swing.JFrame {
     public javax.swing.JTextField txtApellidomaterno;
     public javax.swing.JTextField txtApellidopaterno;
     public javax.swing.JCheckBox txtApoderado;
+    public javax.swing.JTextField txtBuscar;
+    public javax.swing.JLabel txtCodigoApo;
     public javax.swing.JTextField txtCorreoE;
     public javax.swing.JTextField txtDireccion;
     public javax.swing.JTextField txtDni;

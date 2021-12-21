@@ -10,15 +10,25 @@ package Modelo;
  * @author CLAUDIO CRUZADO E
  */
 public class ValidarVacantes {
+    private int codigo;
     private int Cantidad;
     private int Matriculados;
 
     public ValidarVacantes() {
     }
 
-    public ValidarVacantes(int Cantidad, int Matriculados) {
+    public ValidarVacantes(int codigo, int Cantidad, int Matriculados) {
+        this.codigo = codigo;
         this.Cantidad = Cantidad;
         this.Matriculados = Matriculados;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public int getCantidad() {
@@ -36,6 +46,8 @@ public class ValidarVacantes {
     public void setMatriculados(int Matriculados) {
         this.Matriculados = Matriculados;
     }
+
+    
     
     
 }

@@ -35,7 +35,7 @@ public class ControladorPadre implements ActionListener{
         this.padre.btnSalir.addActionListener(this);
         this.padre.btnbuscar.addActionListener(this);
         this.padre.btnCancelar.addActionListener(this);
-        this.padre.btnUsar.addActionListener(this);
+        this.padre.btnVacante.addActionListener(this);
         this.padre.cmdNivel.addActionListener(this);
         this.padre.cmdGrado1.addActionListener(this);
         this.padre.cmdSeccion.addActionListener(this);
@@ -72,7 +72,7 @@ public class ControladorPadre implements ActionListener{
         padre.txtPago.setEnabled(false);
         padre.btnCancelar.setEnabled(false);
         padre.btnRegistrar.setEnabled(false);
-        padre.btnUsar.setEnabled(false);
+        padre.btnVacante.setEnabled(true);
         padre.btnSiguiente.setEnabled(false);
         padre.btnbuscar.setEnabled(false);
     }
@@ -92,7 +92,6 @@ public class ControladorPadre implements ActionListener{
         padre.txtPago.setEnabled(true);
         padre.btnCancelar.setEnabled(true);
         padre.btnRegistrar.setEnabled(true);
-        padre.btnUsar.setEnabled(true);
         padre.btnSiguiente.setEnabled(true);
         padre.btnbuscar.setEnabled(true);
     }
@@ -102,6 +101,7 @@ public class ControladorPadre implements ActionListener{
         int numRegistros = padreD.BuscarPadres(dni).size();
         return numRegistros;
     }
+    
     
     public void LlenarSeccionU(){
         LimpiarSeccionAB();
@@ -309,7 +309,6 @@ public class ControladorPadre implements ActionListener{
                     padre.txtVacante.setText(String.valueOf(Vacantes));
                     if(Vacantes > 0){
                         JOptionPane.showMessageDialog(padre, "SI EXISTEN VACANTES");
-                        DesbloquearPadre();
                     }else{
                         JOptionPane.showMessageDialog(padre, "NO EXISTEN VACANTES");
                     }
@@ -386,11 +385,13 @@ public class ControladorPadre implements ActionListener{
             String rptaRegistroA = null;
             
             if(Apoderado == 1){
-                 rptaRegistroA = apoD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Parentezco, Pago);
+                rptaRegistroA = apoD.Registrar(nombres, apellidoP, apellidoM, Dni, Telefono, TelefonoR, correo, direccion, Parentezco, Pago);
             }
             
             if(rptaRegistro!=null){
-                JOptionPane.showMessageDialog(null, rptaRegistro);
+                
+               JOptionPane.showMessageDialog(null, rptaRegistro);
+               
                if(rptaRegistroA !=null){
                    JOptionPane.showMessageDialog(null, rptaRegistroA);
                }
@@ -410,6 +411,49 @@ public class ControladorPadre implements ActionListener{
             ControladorMadre conM = new ControladorMadre(madre, madreD,apoD);
             padre.dispose();
             madre.setVisible(true); 
+        }
+        
+        if(ae.getSource() == padre.btnVacante){
+            
+            String nivel = padre.cmdNivel.getSelectedItem().toString();
+            String grado = padre.cmdGrado1.getSelectedItem().toString();
+            String seccion = padre.cmdSeccion.getSelectedItem().toString();
+                        
+            int niveles = 0;
+            if(nivel.equals("INICIAL")){
+                niveles = 1;
+            }else if(nivel.equals("PRIMARIA")){
+                niveles = 2;
+            }else if(nivel.equals("SECUNDARIA")){
+                niveles = 3;
+            }
+                        
+            int secciones = 0;
+            if(seccion.equals("U")){
+                secciones = 1;
+            }else if(seccion.equals("A")){
+                secciones = 2;
+            }else if(seccion.equals("B")){
+                secciones = 3;
+            }
+            int numRegistros = valD.ValidarVacante(niveles,grado,secciones).size();                        
+            if(numRegistros>0){
+                int Matriculados = 0;
+                int idGrao = 0;
+                int Actualizar = 0;
+                for(int i = 0; i<numRegistros; i++){
+                    idGrao = valD.ValidarVacante(niveles, grado, secciones).get(i).getCodigo();
+                    Matriculados = valD.ValidarVacante(niveles, grado, secciones).get(i).getMatriculados(); 
+                    Actualizar = Matriculados +1 ;
+                }
+                int rptaRegistro =  padreD.ActualizarVacante(Actualizar, idGrao);
+                if(rptaRegistro>0){
+                    JOptionPane.showMessageDialog(null, "REGISTRAR DATOS");
+                     DesbloquearPadre();
+                }else{
+                JOptionPane.showMessageDialog(null, "ERROR");
+                }
+            }
         }
         
     }
