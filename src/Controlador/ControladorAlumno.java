@@ -91,7 +91,7 @@ public class ControladorAlumno implements ActionListener{
         if(ae.getSource() == alumno.btnbuscarApoderado){
             if(alumno.txtBuscarApoderado.getText().trim().length()!=0){
                 int dni = Integer.parseInt(alumno.txtBuscarApoderado.getText());
-                if(BuscarPadre(dni)>0){
+                if(BuscarApoderado(dni)>0){
                     for(int i = 0; i<BuscarApoderado(dni); i++){
                         alumno.txtCapoderado.setText(String.valueOf(apoD.BuscarApoderado(dni).get(i).getIdApoderado()));
                     }

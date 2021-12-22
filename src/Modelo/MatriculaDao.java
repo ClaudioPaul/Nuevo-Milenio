@@ -90,7 +90,7 @@ public class MatriculaDao {
         String path = "src\\reportes\\Reporte.jasper";
         
         Map parametro  = new HashMap();
-        parametro.put("AlumnoDni",dni);
+        parametro.put("DniAlumno",dni);
 
         
             reporte = (JasperReport) JRLoader.loadObjectFromFile(path);

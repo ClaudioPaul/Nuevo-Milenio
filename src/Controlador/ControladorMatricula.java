@@ -99,14 +99,14 @@ public class ControladorMatricula implements ActionListener{
             }
        }
        
-//       if(ae.getSource() == rfinal.btnImprimir){
-//           int alumno = Integer.parseInt(rfinal.txtBuscar.getText());
-//            try {
-//                matriculaD.GenrerarReporte(alumno);
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ControladorMatricula.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//       }
+       if(ae.getSource() == rfinal.btnImprimir){
+           int dni = Integer.parseInt(rfinal.txtBuscar.getText());
+            try {
+                matriculaD.GenrerarReporte(dni);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ControladorMatricula.class.getName()).log(Level.SEVERE, null, ex);
+            }
+       }
     }
     
 }
