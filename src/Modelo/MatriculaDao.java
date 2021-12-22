@@ -86,15 +86,17 @@ public class MatriculaDao {
         try {
             Connection conn= conexion.getConexion();
 
-        JasperReport reporte = null;
-        String path = "src\\reportes\\Reporte.jasper";
+//        JasperReport reporte = null;
+//        String path = "src\\reportes\\Reporte.jasper";
         
         Map parametro  = new HashMap();
         parametro.put("DniAlumno",dni);
 
         
-            reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
-            JasperPrint jprint = JasperFillManager.fillReport(reporte, parametro, conn);
+//            reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
+            JasperPrint jprint = 
+            JasperFillManager.fillReport(MatriculaDao.class.getResourceAsStream
+            ("/reportes/Reporte.jasper"), new HashMap<>(parametro),conn);
             
             JasperViewer view = new JasperViewer(jprint, false);
             
