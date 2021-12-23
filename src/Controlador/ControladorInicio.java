@@ -6,9 +6,11 @@
 package Controlador;
 
 import Modelo.ApoderadoDao;
+import Modelo.MatriculaDao;
 import Modelo.PadreDao;
 import Modelo.ValidarVacantesDao;
 import Vista.FrmInicio;
+import Vista.FrmRegistroFinal;
 import Vista.FrmRegistroPadre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,6 +26,7 @@ public class ControladorInicio implements ActionListener{
     public ControladorInicio(FrmInicio inicio){
         this.inicio = inicio;
         this.inicio.btnAlumnos.addActionListener(this);
+        this.inicio.btnMatricula.addActionListener(this);
     }
 
     @Override
@@ -37,6 +40,12 @@ public class ControladorInicio implements ActionListener{
            conP.limpiarTextos();
 //           conP.BloquearPadre();
            padre.setVisible(true);
+       }
+       if(ae.getSource() == inicio.btnMatricula){
+            FrmRegistroFinal r = new FrmRegistroFinal();
+            MatriculaDao mDao = new MatriculaDao();
+            ControladorMatricula conM= new ControladorMatricula(r, mDao);
+            r.setVisible(true);
        }
     }
     

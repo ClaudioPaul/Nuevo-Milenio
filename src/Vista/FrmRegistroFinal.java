@@ -54,6 +54,7 @@ public class FrmRegistroFinal extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         cmdPago = new javax.swing.JComboBox<>();
         btnImprimir = new javax.swing.JButton();
+        btnBoleta = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnSiguiente = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
@@ -212,7 +213,14 @@ public class FrmRegistroFinal extends javax.swing.JFrame {
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizar.png"))); // NOI18N
         btnImprimir.setText("REPORTE");
         jPanel3.add(btnImprimir);
-        btnImprimir.setBounds(250, 260, 210, 30);
+        btnImprimir.setBounds(260, 260, 210, 30);
+
+        btnBoleta.setBackground(new java.awt.Color(174, 174, 174));
+        btnBoleta.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        btnBoleta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/documentediting_editdocuments_text_documentedi_2820.png"))); // NOI18N
+        btnBoleta.setText("IMPRIMIR BOLETA");
+        jPanel3.add(btnBoleta);
+        btnBoleta.setBounds(30, 260, 190, 30);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(50, 170, 700, 300);
@@ -317,6 +325,7 @@ public class FrmRegistroFinal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnBoleta;
     public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnImprimir;
     public javax.swing.JButton btnSalir;

@@ -55,13 +55,13 @@ public class ControladorApoderado implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == apoderado.btnSiguiente){
-            apoderado.dispose();
-            FrmAlumno alumno = new FrmAlumno();
             AlumnoDao aDao  =new AlumnoDao();
             ApoderadoDao apoD = new ApoderadoDao();
             PadreDao pDao = new PadreDao();
             MadreDao mDao = new MadreDao();
+            FrmAlumno alumno = new FrmAlumno();
             ControladorAlumno conA = new ControladorAlumno(alumno, aDao, apoD, pDao, mDao);
+            apoderado.dispose();
             alumno.setVisible(true);
         }
          

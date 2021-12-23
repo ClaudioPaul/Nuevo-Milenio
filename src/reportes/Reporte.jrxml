@@ -3,113 +3,195 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#00FFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="ff5ca9c4-f1bf-43e4-acd0-39a1c3da1bd3"/>
 	<parameter name="DniAlumno" class="java.lang.Integer">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[Select Alumno.Dni, Alumno.Nombre, Alumno.ApellidoP, Alumno.ApellidoM,
-		Matricula.GradoCursar, Matricula.pago
-from Matricula inner join Alumno on 
-Matricula.idAlumno = alumno.idAlumno
-where alumno.Dni = $P!{DniAlumno}]]>
+		<![CDATA[SELECT
+     Matricula."GradoCursar" AS Matricula_GradoCursar,
+     Matricula."pago" AS Matricula_pago,
+     alumno."Nombre" AS alumno_Nombre,
+     alumno."ApellidoP" + ' ' +alumno."ApellidoM" AS alumno_ApellidoS ,
+     alumno."Dni" AS alumno_Dni,
+     datosapoderado."Nombre" AS datosapoderado_Nombre,
+     datosapoderado."ApellidoP" +' '+ datosapoderado."ApellidoM" AS datosapoderado_ApellidoS,
+     datosapoderado."Dni" AS datosapoderado_Dni
+FROM
+     "Matricula" Matricula INNER JOIN "alumno" alumno ON Matricula."idalumno" = alumno."idalumno"
+     INNER JOIN "datosapoderado" datosapoderado ON alumno."idApoderado" = datosapoderado."idApoderado"
+WHERE Alumno.Dni = $P!{DniAlumno}]]>
 	</queryString>
-	<field name="Dni" class="java.lang.Integer"/>
-	<field name="Nombre" class="java.lang.String"/>
-	<field name="ApellidoP" class="java.lang.String"/>
-	<field name="ApellidoM" class="java.lang.String"/>
-	<field name="GradoCursar" class="java.lang.String"/>
-	<field name="pago" class="java.lang.Integer"/>
+	<field name="Matricula_GradoCursar" class="java.lang.String"/>
+	<field name="Matricula_pago" class="java.lang.Integer"/>
+	<field name="alumno_Nombre" class="java.lang.String"/>
+	<field name="alumno_ApellidoS" class="java.lang.String"/>
+	<field name="alumno_Dni" class="java.lang.Integer"/>
+	<field name="datosapoderado_Nombre" class="java.lang.String"/>
+	<field name="datosapoderado_ApellidoS" class="java.lang.String"/>
+	<field name="datosapoderado_Dni" class="java.lang.Integer"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="119" splitType="Stretch">
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="404" y="0" width="151" height="20" uuid="48633d89-3015-4c42-a89a-8a40b76587d5"/>
+				<reportElement x="404" y="9" width="151" height="20" uuid="48633d89-3015-4c42-a89a-8a40b76587d5"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement x="14" y="9" width="70" height="70" uuid="d4909ffa-62c2-461b-968a-4f9f95f8d9d9"/>
+				<reportElement x="16" y="43" width="70" height="70" uuid="d4909ffa-62c2-461b-968a-4f9f95f8d9d9"/>
 				<imageExpression><![CDATA["C:\\Users\\CLAUDIO CRUZADO\\Documents\\NetBeansProjects\\MatriculasNuevoMilenio\\src\\Imagenes\\LOGO.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="154" y="32" width="264" height="36" uuid="852e005a-0876-4202-b8e3-85f02edeab58"/>
+				<reportElement x="113" y="43" width="345" height="36" uuid="852e005a-0876-4202-b8e3-85f02edeab58"/>
 				<textElement textAlignment="Center">
 					<font size="24"/>
 				</textElement>
-				<text><![CDATA[FICHA DE MATRICULA]]></text>
+				<text><![CDATA[FICHA DE MATRICULA 2022]]></text>
 			</staticText>
-		</band>
-	</title>
-	<pageHeader>
-		<band height="50" splitType="Stretch">
 			<staticText>
-				<reportElement x="211" y="14" width="119" height="24" uuid="032d4a93-7707-49e3-86ec-034861cf9d7a"/>
-				<textElement>
+				<reportElement x="172" y="95" width="206" height="24" uuid="032d4a93-7707-49e3-86ec-034861cf9d7a"/>
+				<textElement textAlignment="Center">
 					<font size="18"/>
 				</textElement>
 				<text><![CDATA[I.E.P NUEVO MILENIO]]></text>
 			</staticText>
 		</band>
+	</title>
+	<pageHeader>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="7" width="555" height="1" uuid="5fc6aa95-75af-47a4-b136-52af0b89727f"/>
+			</line>
+		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="42" splitType="Stretch">
-			<staticText>
-				<reportElement x="14" y="20" width="100" height="20" uuid="eb1edf39-0710-406c-9037-4775768fa336"/>
-				<text><![CDATA[Dni]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="154" y="20" width="100" height="20" uuid="2a692d72-006c-47d0-935c-fdea833aecb7"/>
-				<text><![CDATA[Nombre]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="304" y="20" width="100" height="20" uuid="a4717ae4-4c18-400f-be05-eba3b61da0e9"/>
-				<text><![CDATA[Apellido Paterno]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="434" y="20" width="100" height="20" uuid="abdaf33f-a7b4-4d3a-a926-93265d332f99"/>
-				<text><![CDATA[Apellido Materno]]></text>
-			</staticText>
-		</band>
+		<band height="13" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="165" splitType="Stretch">
+		<band height="245" splitType="Stretch">
 			<staticText>
-				<reportElement x="434" y="103" width="100" height="20" uuid="228ce5a3-dc15-479e-86c8-e697ff4c9d31"/>
-				<text><![CDATA[PAGO]]></text>
+				<reportElement x="52" y="44" width="76" height="20" uuid="a9065b5d-3847-4601-9931-6f514d13d98a"/>
+				<text><![CDATA[CODIGO:]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="128" y="44" width="100" height="20" uuid="3384140c-8efd-48f0-bdce-1fe963793694"/>
+				<textFieldExpression><![CDATA[$F{alumno_Dni}]]></textFieldExpression>
+			</textField>
 			<staticText>
-				<reportElement x="418" y="123" width="16" height="20" uuid="0ef9812e-0429-4a76-9db5-b39daecd34a0"/>
+				<reportElement x="52" y="64" width="76" height="20" uuid="0869922f-f210-4532-9ba9-8e8541b27556"/>
+				<text><![CDATA[NOMBRE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="64" width="100" height="20" uuid="f611c83f-1d7d-40b6-933e-fd89ca8a026c"/>
+				<textFieldExpression><![CDATA[$F{alumno_Nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="52" y="84" width="76" height="20" uuid="08a88db7-c85d-49af-ad00-599983c5ecb2"/>
+				<text><![CDATA[APELLIDOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="84" width="100" height="20" uuid="e844fbc9-6377-41b8-8d92-f6bb1315079f"/>
+				<textFieldExpression><![CDATA[$F{alumno_ApellidoS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="52" y="12" width="154" height="20" uuid="a1b9d463-f757-4311-83ed-c0ee4d56b11f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL ALUMNO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="26" y="32" width="211" height="1" uuid="65927c0b-eacc-469e-9bbc-b5da4d5bec55"/>
+			</line>
+			<line>
+				<reportElement x="26" y="104" width="211" height="1" uuid="7d740843-0241-46f1-9910-6d58e507c252"/>
+			</line>
+			<staticText>
+				<reportElement x="312" y="13" width="185" height="20" uuid="b90327eb-c883-435b-92ba-fe907029ef18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL APODERADO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="297" y="33" width="211" height="1" uuid="05149f6b-6b36-4386-9695-c06c6a2629e2"/>
+			</line>
+			<line>
+				<reportElement x="297" y="105" width="211" height="1" uuid="dcf535ea-f1f4-4ab3-98a5-5cd1a97a8c95"/>
+			</line>
+			<staticText>
+				<reportElement x="327" y="44" width="70" height="20" uuid="867e8704-dccb-42e0-8cb3-abb714b29f1e"/>
+				<text><![CDATA[DNI:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="44" width="100" height="20" uuid="b5fca72e-8a76-4793-bbd9-62dfaac3c9fe"/>
+				<textFieldExpression><![CDATA[$F{datosapoderado_Dni}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="327" y="64" width="70" height="20" uuid="417fd6ce-cc9a-4616-9464-58c648ee0d2b"/>
+				<text><![CDATA[NOMBRE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="64" width="100" height="20" uuid="4734ccac-34af-47a8-96e2-e52d9ed28d13"/>
+				<textFieldExpression><![CDATA[$F{datosapoderado_Nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="327" y="86" width="70" height="20" uuid="bcd674fb-3008-4673-9c0b-7b931469a8e2"/>
+				<text><![CDATA[APELLIDOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="86" width="100" height="20" uuid="6766792a-c84b-450f-a55b-6732b82c7d37"/>
+				<textFieldExpression><![CDATA[$F{datosapoderado_ApellidoS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="37" y="127" width="100" height="20" uuid="b868ce11-c061-46b9-912a-2937f3cd4cf2"/>
+				<text><![CDATA[GRADO A CURSAR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="137" y="127" width="135" height="20" uuid="a9d56dc5-7ff9-450f-91cc-f4a86fa493c7"/>
+				<textFieldExpression><![CDATA[$F{Matricula_GradoCursar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="378" y="127" width="119" height="20" uuid="003a5b8b-528d-4199-9f22-e290a3c04888"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[PAGO DE MATRICULA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="358" y="147" width="100" height="20" uuid="e9960ca1-7eca-4009-b25b-91abd6716e77"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{Matricula_pago}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="427" y="147" width="19" height="20" uuid="d01e1d14-f7cc-4fd6-b74b-f67ee3854b2b"/>
 				<text><![CDATA[S/.]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="14" y="20" width="100" height="20" uuid="3af94c0d-8857-43ac-b27f-fa04531b12d9"/>
-				<textFieldExpression><![CDATA[$F{Dni}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="154" y="20" width="100" height="20" uuid="078d0ffd-39ca-4814-9d02-9275b8746ce5"/>
-				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="304" y="20" width="100" height="20" uuid="a5879e36-63b0-4bac-87cd-1a7cd7ac39c1"/>
-				<textFieldExpression><![CDATA[$F{ApellidoP}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="434" y="20" width="100" height="20" uuid="b0745c6c-861b-4047-bc95-15f4ef320764"/>
-				<textFieldExpression><![CDATA[$F{ApellidoM}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="254" y="133" width="100" height="20" uuid="b712a4a6-c647-4c7a-8c69-39655dd8abd2"/>
-				<textFieldExpression><![CDATA[$F{GradoCursar}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="254" y="103" width="100" height="20" uuid="ad57d2a6-ef4c-4b43-82fd-42af415679d4"/>
-				<text><![CDATA[Grado a Cursar]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="434" y="123" width="100" height="20" uuid="c102052e-6520-4e88-9121-c142b640f42a"/>
-				<textFieldExpression><![CDATA[$F{pago}]]></textFieldExpression>
-			</textField>
+			<image>
+				<reportElement x="206" y="157" width="132" height="78" uuid="a2d460a8-803e-46e9-9f62-e21f4a3338c8"/>
+				<imageExpression><![CDATA["C:\\Users\\CLAUDIO CRUZADO\\Documents\\NetBeansProjects\\MatriculasNuevoMilenio\\src\\Imagenes\\firma.png"]]></imageExpression>
+			</image>
 		</band>
 	</detail>
 	<columnFooter>
