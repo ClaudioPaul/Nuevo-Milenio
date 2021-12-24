@@ -6,7 +6,6 @@
 package matriculasnuevomilenio;
 
 import Controlador.ControladorInicio;
-import Vista.FrmAlumno;
 import Vista.FrmInicio;
 
 /**

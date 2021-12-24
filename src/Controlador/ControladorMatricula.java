@@ -100,12 +100,17 @@ public class ControladorMatricula implements ActionListener{
        }
        
        if(ae.getSource() == rfinal.btnImprimir){
-           int dni = Integer.parseInt(rfinal.txtBuscar.getText());
+           if(rfinal.txtBuscar.getText().trim().length()!=0){
+            int dni = Integer.parseInt(rfinal.txtBuscar.getText());
             try {
                 matriculaD.GenrerarReporte(dni);
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ControladorMatricula.class.getName()).log(Level.SEVERE, null, ex);
             }
+           }else{
+               JOptionPane.showMessageDialog(null, "INGRESE EL DNI DE UN ALUMNO PARA GENERAR REPORTE");
+           }
+           
        }
     }
     
