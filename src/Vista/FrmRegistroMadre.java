@@ -171,17 +171,17 @@ public class FrmRegistroMadre extends javax.swing.JFrame {
         txtApoderado.setBackground(new java.awt.Color(255, 255, 255));
         txtApoderado.setText("SI");
         jPanel3.add(txtApoderado);
-        txtApoderado.setBounds(120, 230, 40, 23);
+        txtApoderado.setBounds(120, 230, 40, 40);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("RESPONSABLE DE PAGO:");
         jPanel3.add(jLabel12);
-        jLabel12.setBounds(260, 240, 160, 15);
+        jLabel12.setBounds(290, 240, 160, 15);
 
         txtPago.setBackground(new java.awt.Color(255, 255, 255));
         txtPago.setText("SI");
         jPanel3.add(txtPago);
-        txtPago.setBounds(420, 230, 40, 23);
+        txtPago.setBounds(450, 230, 40, 40);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(90, 170, 540, 300);
