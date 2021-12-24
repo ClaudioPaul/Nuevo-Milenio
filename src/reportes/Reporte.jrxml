@@ -60,10 +60,6 @@ WHERE Alumno.Dni = $P!{DniAlumno}]]>
 				<reportElement x="404" y="9" width="151" height="20" uuid="48633d89-3015-4c42-a89a-8a40b76587d5"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
-			<image>
-				<reportElement x="16" y="43" width="70" height="70" uuid="d4909ffa-62c2-461b-968a-4f9f95f8d9d9"/>
-				<imageExpression><![CDATA["C:\\Users\\CLAUDIO CRUZADO\\Documents\\NetBeansProjects\\MatriculasNuevoMilenio\\src\\Imagenes\\LOGO.png"]]></imageExpression>
-			</image>
 			<staticText>
 				<reportElement x="113" y="43" width="345" height="36" uuid="852e005a-0876-4202-b8e3-85f02edeab58"/>
 				<textElement textAlignment="Center">
@@ -78,6 +74,10 @@ WHERE Alumno.Dni = $P!{DniAlumno}]]>
 				</textElement>
 				<text><![CDATA[I.E.P NUEVO MILENIO]]></text>
 			</staticText>
+			<image>
+				<reportElement x="26" y="43" width="70" height="70" uuid="51787685-bd7c-4c80-b43e-36a9d88f1fd9"/>
+				<imageExpression><![CDATA["C:\\Users\\CLAUDIO CRUZADO\\Documents\\NetBeansProjects\\MatriculasNuevoMilenio\\src\\Imagenes\\LOGO.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -91,7 +91,7 @@ WHERE Alumno.Dni = $P!{DniAlumno}]]>
 		<band height="13" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="245" splitType="Stretch">
+		<band height="262" splitType="Stretch">
 			<staticText>
 				<reportElement x="52" y="44" width="76" height="20" uuid="a9065b5d-3847-4601-9931-6f514d13d98a"/>
 				<text><![CDATA[CODIGO:]]></text>
@@ -189,7 +189,7 @@ WHERE Alumno.Dni = $P!{DniAlumno}]]>
 				<text><![CDATA[S/.]]></text>
 			</staticText>
 			<image>
-				<reportElement x="206" y="157" width="132" height="78" uuid="a2d460a8-803e-46e9-9f62-e21f4a3338c8"/>
+				<reportElement x="184" y="163" width="174" height="99" uuid="5ba7b5fd-e82d-4974-90ba-8e5c72a833bb"/>
 				<imageExpression><![CDATA["C:\\Users\\CLAUDIO CRUZADO\\Documents\\NetBeansProjects\\MatriculasNuevoMilenio\\src\\Imagenes\\firma.png"]]></imageExpression>
 			</image>
 		</band>

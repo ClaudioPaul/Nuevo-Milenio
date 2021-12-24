@@ -3,13 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Vista/FrmAlumno.java</file>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Modelo/MatriculaDao.java</file>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Vista/FrmRegistroApoderado.java</file>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Controlador/ControladorMadre.java</file>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Vista/FrmRegistroPadre.java</file>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Controlador/ControladorApoderado.java</file>
-            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Vista/FrmInicio.java</file>
+            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Modelo/AlumnoDao.java</file>
+            <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Controlador/ControladorInicio.java</file>
             <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Modelo/Conexion.java</file>
             <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Controlador/ControladorAlumno.java</file>
             <file>file:/C:/Users/CLAUDIO%20CRUZADO/Documents/NetBeansProjects/MatriculasNuevoMilenio/src/Controlador/ControladorMatricula.java</file>
